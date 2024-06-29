@@ -1,0 +1,135 @@
+/*NORMALIZE*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+p { text-wrap: pretty; }
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
+
+img, video, svg { height: auto; max-width: 100%; }
+
+body { min-height: 100dvh; }
+/*NORMALIZE*/
+
+/*VARIABLES*/
+:root {
+  --background-color-darkTheme: #242527;
+  --text-color-darkTheme: #e8e7e4;
+
+  --button-colorOption-black: #191B1D ;
+  --button-colorOption-blue: #2C7CBF;
+  --button-colorOption-yellow: #FDD315;
+  --button-colorOption-white: #F1F2F1;
+  --button-colorOption-green: #24B98E;
+  --button-colorOption-red: #EC1456;
+  --button-colorOption-orange: #F58F1D;
+  --button-colorOption-ivory: #B6C994;
+  --button-colorOption-pink: #E961A3;
+}
+/*VARIABLES*/
+
+  /*frame*/
+  /*position*/
+  /*theme*/
+  /*interact*/
+
+body {
+  /*theme*/
+  background-color: var(--background-color-darkTheme);
+  color: var(--text-color-darkTheme);
+}
+
+.CanvasContainer {
+  /*frame*/
+  height: 400px;
+  width: 400px;
+  border: 2px solid;
+  border-radius: 20px;
+  /*position*/
+  /*theme*/
+}
+
+.CanvasContainer > canvas {
+  /*frame*/
+  width: 100%;
+  height: 100%;
+  /*position*/
+  /*theme*/
+}
+
+article {
+  /*frame*/
+  gap: 20px;
+  /*position*/
+  display: flex;
+  /*theme*/
+}
+
+.OptionsList {
+  /*frame*/
+  height: min-content;
+  gap: 1rem;
+  /*position*/
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*theme*/
+}
+
+.ButtonsRow {
+  /*frame*/
+  gap: 6px;
+  /*position*/
+  display: flex;
+  /*theme*/
+}
+
+.ButtonsRow > button {
+  /*frame*/
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  /*position*/
+  /*theme*/
+  /*interact*/
+  cursor: pointer;
+}
+
+#GuidesBlack, #BumpersBlack, #ShoesBlack, #BladesBlack {
+  background-color: var(--button-colorOption-black);
+}
+
+#GuidesBlue, #BumpersBlue, #ShoesBlue, #BladesBlue {
+  background-color: var(--button-colorOption-blue);
+}
+
+#GuidesYellow, #BumpersYellow, #ShoesYellow {
+  background-color: var(--button-colorOption-yellow);
+}
+
+#GuidesWhite, #BumpersWhite, #ShoesWhite {
+  background-color: var(--button-colorOption-white);
+}
+
+#GuidesGreen, #BumpersGreen, #BladesGreen {
+  background-color: var(--button-colorOption-green);
+}
+
+#GuidesRed, #BumpersRed, #BladesRed {
+  background-color: var(--button-colorOption-red);
+}
+
+#GuidesOrange, #BumpersOrange, #BladesOrange {
+  background-color: var(--button-colorOption-orange);
+}
+
+#BladesIvory {
+  background-color: var(--button-colorOption-ivory);
+}
+
+#GuidesPink {
+  background-color: var(--button-colorOption-pink);
+}
