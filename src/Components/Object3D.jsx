@@ -22,4 +22,3 @@ function Object3D({ texture }) {
 }
 
 export default Object3D;
-

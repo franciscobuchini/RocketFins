@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 p { text-wrap: pretty; }
@@ -18,17 +19,20 @@ body { min-height: 100dvh; }
 /*VARIABLES*/
 :root {
   --background-color-darkTheme: #242527;
-  --text-color-darkTheme: #e8e7e4;
+  --text-color-darkTheme: #F5F5F7;
 
-  --button-colorOption-black: #191B1D ;
-  --button-colorOption-blue: #2C7CBF;
-  --button-colorOption-yellow: #FDD315;
-  --button-colorOption-white: #F1F2F1;
-  --button-colorOption-green: #24B98E;
-  --button-colorOption-red: #EC1456;
-  --button-colorOption-orange: #F58F1D;
-  --button-colorOption-ivory: #B6C994;
-  --button-colorOption-pink: #E961A3;
+  --background-color-lightTheme: #F5F5F7;
+  --text-color-lightTheme: #242527;
+
+  --button-InputOption-black: #191B1D ;
+  --button-InputOption-blue: #2C7CBF;
+  --button-InputOption-yellow: #FDD315;
+  --button-InputOption-white: #FFFFFF;
+  --button-InputOption-green: #24B98E;
+  --button-InputOption-red: #EC1456;
+  --button-InputOption-orange: #F58F1D;
+  --button-InputOption-ivory: #B6C994;
+  --button-InputOption-pink: #E961A3;
 }
 /*VARIABLES*/
 
@@ -38,9 +42,11 @@ body { min-height: 100dvh; }
   /*interact*/
 
 body {
+  /*frame*/
+  padding: 30px;
   /*theme*/
-  background-color: var(--background-color-darkTheme);
-  color: var(--text-color-darkTheme);
+  background-color: var(--button-InputOption-white);
+  color: var(--text-color-lightTheme);
 }
 
 nav > ul {
@@ -51,12 +57,13 @@ nav > ul {
 
 .CanvasContainer {
   /*frame*/
-  height: 400px;
+  height: 500px;
   width: 400px;
-  border: 2px solid;
-  border-radius: 20px;
   /*position*/
   /*theme*/
+  border-radius: 10px;
+  /*interact*/
+  overflow: hidden;
 }
 
 .CanvasContainer > canvas {
@@ -69,74 +76,109 @@ nav > ul {
 
 article {
   /*frame*/
-  gap: 20px;
+  gap: 30px;
+  padding: 10px;
   /*position*/
   display: flex;
+  flex-wrap: wrap;
   /*theme*/
+  border-radius: 20px;
+  background-color: white;
 }
 
-.OptionsList {
+.OptionsRow {
   /*frame*/
-  height: min-content;
-  gap: 1rem;
+  gap: 18px;
   /*position*/
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   /*theme*/
 }
 
 .ButtonsRow {
   /*frame*/
-  gap: 6px;
+  gap: 6px 10px;
   /*position*/
   display: flex;
+  flex-wrap: wrap;
   /*theme*/
 }
 
-.ButtonsRow > button {
+.ButtonsRow > label {
+  width: 100%;
+}
+
+.InputOption > label {
   /*frame*/
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-  /*position*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  min-width: 24px;
+  padding: 0 6px;
   /*theme*/
+  border-radius: 24px;
+  border: 2px solid white;
+  outline: 2px solid var(--background-color-lightTheme);
+  font-weight: 600;
+  font-size: 12px;
   /*interact*/
   cursor: pointer;
 }
 
-#GuidesBlack, #BumpersBlack, #ShoesBlack, #BladesBlack {
-  background-color: var(--button-colorOption-black);
+.InputOption > input {
+  display: none;
 }
 
-#GuidesBlue, #BumpersBlue, #ShoesBlue, #BladesBlue {
-  background-color: var(--button-colorOption-blue);
+.InputOption > input:checked + label {
+  /*frame*/
+  padding: 0 8px;
+  min-width: 36px;
+  /*theme*/
+  background-color: white;
+  outline: 2px solid grey;
 }
 
-#GuidesYellow, #BumpersYellow, #ShoesYellow {
-  background-color: var(--button-colorOption-yellow);
+.Guide {
+  background-color: white;
+  width: 100%;
+  height: 100px;
 }
 
-#GuidesWhite, #BumpersWhite, #ShoesWhite {
-  background-color: var(--button-colorOption-white);
+#GuidesBlack + label, #BumpersBlack + label, #ShoesBlack + label, #BladesBlack + label {
+  background-color: var(--button-InputOption-black);
 }
 
-#GuidesGreen, #BumpersGreen, #BladesGreen {
-  background-color: var(--button-colorOption-green);
+#GuidesBlue + label, #BumpersBlue + label, #ShoesBlue + label, #BladesBlue + label {
+  background-color: var(--button-InputOption-blue);
 }
 
-#GuidesRed, #BumpersRed, #BladesRed {
-  background-color: var(--button-colorOption-red);
+#GuidesYellow + label, #BumpersYellow + label, #ShoesYellow + label {
+  background-color: var(--button-InputOption-yellow);
 }
 
-#GuidesOrange, #BumpersOrange, #BladesOrange {
-  background-color: var(--button-colorOption-orange);
+#GuidesWhite + label, #BumpersWhite + label, #ShoesWhite + label {
+  background-color: var(--button-InputOption-white);
 }
 
-#BladesIvory {
-  background-color: var(--button-colorOption-ivory);
+#GuidesGreen + label, #BumpersGreen + label, #BladesGreen + label {
+  background-color: var(--button-InputOption-green);
 }
 
-#GuidesPink {
-  background-color: var(--button-colorOption-pink);
+#GuidesRed + label, #BumpersRed + label, #BladesRed + label {
+  background-color: var(--button-InputOption-red);
+}
+
+#GuidesOrange + label, #BumpersOrange + label, #BladesOrange + label {
+  background-color: var(--button-InputOption-orange);
+}
+
+#BladesIvory + label {
+  background-color: var(--button-InputOption-ivory);
+}
+
+#GuidesPink + label, #BladesPink + label {
+  background-color: var(--button-InputOption-pink);
 }
