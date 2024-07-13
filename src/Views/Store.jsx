@@ -1,10 +1,10 @@
-//Tienda.jsx
+//Store.jsx
 import React, { useState, useEffect } from 'react';
 import Object3D from "../Components/Object3D";
 import InputOption from "../Components/InputOption";
 
-function Tienda() {
-  const [texture, setTexture] = useState('option3');
+function Store() {
+  const [texture, setTexture] = useState('option5');
   const [bladesTexture, setBladesTexture] = useState('option1');
   const [price, setPrice] = useState(230);
   const [guideText, setGuideText] = useState('');
@@ -24,15 +24,14 @@ function Tienda() {
 
   const textGuide_size = 'S: 5-6 (21cm shoe length) // M: 7-8 (23cm shoe length) // L: 8-9 (24.5cm shoe length) // XL: 10-11 (27cm shoe length)';
   const textGuide_bladeArea = 'Less blade area: more agility. (recomended for UWH) // More blade area: more power. (recommended for UWR)';
-  const textGuide_bladeStiffness = 'The fiberglass blades have the best slap ever in the market, helping to save energy when swimming. And its high flexibility coefficient reduces the probability of blade fracture.';
-  const textGuide_bladesColor = 'The fiberglass blades have the best slap ever in the market, helping to save energy when swimming. And its high flexibility coefficient reduces the probability of blade fracture.';
+  const textGuide_bladeStiffness = 'The fiberglass blades have the best slap ever in the market, helping to save energy when swimming. These have high flexibility coefficient reduces the probability of blade fracture.';
+  const textGuide_bladesColor = 'The fiberglass blades have the best slap ever in the market, helping to save energy when swimming. These have high flexibility coefficient reduces the probability of blade fracture.';
   const textGuide_shoesColor = 'Made of superior rubber material, comfortable, and flexible. With a tight fit to get the necessary grip, which helps maintain greater efficiency by transferring the energy produced by the body to the fin.';
   const textGuide_bumpersColor = 'Bumpers protect players from injuries. Made from high quality rubber material, more durable than other fiberglass fins in the market.';
   const textGuide_guidesColor = 'Guides help fin stabilization, avoiding slide movements, and improving kick efficiency, while reducing water resistance and turbulence.';
 
   return (
     <>
-      <h1>Tienda</h1>
       <article>
         <Object3D texture={texture} />
         <div className='OptionsRow'>
@@ -70,9 +69,10 @@ function Tienda() {
           <div className='ButtonsRow'>
             <label>Shoes color:</label>
             <InputOption setTexture={setTexture} texturePath="option1" id='ShoesBlack' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
+            <InputOption setTexture={setTexture} texturePath="option4" id='ShoesWhite' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
             <InputOption setTexture={setTexture} texturePath="option2" id='ShoesBlue' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
             <InputOption setTexture={setTexture} texturePath="option3" id='ShoesYellow' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option4" id='ShoesWhite' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
+
           </div>
           
           <div className='ButtonsRow'>
@@ -96,16 +96,15 @@ function Tienda() {
             <InputOption setTexture={setTexture} texturePath="option7" id='GuidesOrange' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
             <InputOption setTexture={setTexture} texturePath="option9" id='GuidesPink' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
           </div>
-
-          <div className='Subtotal'>
-            <label>Subtotal: </label>
-            <span>$usd {price}</span>
-          </div>
         </div>
         <div className='Guide'> {guideText} </div>
+        <div className='Subtotal'>
+            <label>Subtotal: </label>
+            <span>USD {price}</span>
+          </div>
       </article>
     </>
   );
 }
 
-export default Tienda;
+export default Store;

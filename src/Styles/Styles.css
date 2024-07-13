@@ -5,6 +5,8 @@
   padding: 0;
   text-decoration: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--main-text);
+  transition: 0.3s;
 }
 
 p { text-wrap: pretty; }
@@ -18,8 +20,10 @@ body { min-height: 100dvh; }
 
 /*VARIABLES*/
 :root {
-  --background-color-darkTheme: #242527;
-  --text-color-darkTheme: #F5F5F7;
+  --dark: #242527;
+  --light: #F5F5F7;
+  --transparent25-dark: #24252740;
+  --transparent25-light: #F5F5F740;
 
   --background-color-lightTheme: #F5F5F7;
   --text-color-lightTheme: #242527;
@@ -28,11 +32,14 @@ body { min-height: 100dvh; }
   --button-InputOption-blue: #2C7CBF;
   --button-InputOption-yellow: #FDD315;
   --button-InputOption-white: #FFFFFF;
-  --button-InputOption-green: #24B98E;
+  --button-InputOption-green: #3FBC92;
   --button-InputOption-red: #EC1456;
   --button-InputOption-orange: #F58F1D;
   --button-InputOption-ivory: #B6C994;
   --button-InputOption-pink: #E961A3;
+
+  --main-background: var(--dark);
+  --main-text: var(--light);
 }
 /*VARIABLES*/
 
@@ -41,37 +48,66 @@ body { min-height: 100dvh; }
   /*theme*/
   /*interact*/
 
+.Main {
+  /*position*/
+  display: flex;
+  flex-direction: column;
+  /*frame*/
+  gap: 60px;
+}
+  
 body {
   /*frame*/
   padding: 30px;
   /*theme*/
-  background-color: var(--button-InputOption-white);
-  color: var(--text-color-lightTheme);
+  background-color: var(--main-background);
+  color: var(--main-text);
+}
+
+nav {
+  /*position*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav > ul {
   /*position*/
   display: flex;
   justify-content: center;
+  /*frame*/
+  gap: 10px;
 }
 
-.CanvasContainer {
-  /*frame*/
-  height: 500px;
-  width: 400px;
+nav > ul > li {
   /*position*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*frame*/
+
   /*theme*/
-  border-radius: 10px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 12px;
   /*interact*/
-  overflow: hidden;
+  cursor: pointer;
 }
 
-.CanvasContainer > canvas {
+nav > ul > li.active {
+  /* theme */
+  background-color: var(--button-InputOption-green);
+}
+
+nav > ul > li > a {
   /*frame*/
-  width: 100%;
-  height: 100%;
-  /*position*/
-  /*theme*/
+  padding: 4px 8px;
+  /* theme */
+  color: var(--main-text);
+}
+
+nav > img {
+  height: 24px;
 }
 
 article {
@@ -83,8 +119,34 @@ article {
   flex-wrap: wrap;
   /*theme*/
   border-radius: 20px;
-  background-color: white;
 }
+
+
+.CanvasContainer {
+  /*frame*/
+  height: 500px;
+  width: 400px;
+  /*position*/
+  /*theme*/
+  border-radius: 10px;
+
+  /*interact*/
+  overflow: hidden;
+  cursor: grab;
+}
+
+.CanvasContainer:active {
+  cursor: grabbing;
+}
+
+.CanvasContainer > canvas {
+  /*frame*/
+  width: 100%;
+  height: 100%;
+  /*position*/
+  /*theme*/
+}
+
 
 .OptionsRow {
   /*frame*/
@@ -107,7 +169,12 @@ article {
 }
 
 .ButtonsRow > label {
+  /*frame*/
   width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  /*theme*/
+
 }
 
 .InputOption > label {
@@ -117,13 +184,15 @@ article {
   align-items: center;
   height: 24px;
   min-width: 24px;
-  padding: 0 6px;
+  padding: 0 8px;
   /*theme*/
   border-radius: 24px;
-  border: 2px solid white;
-  outline: 2px solid var(--background-color-lightTheme);
+  border: 2px solid var(--main-background);
+  color: var(--main-text);
+  outline: 2px solid var(--transparent25-light);
   font-weight: 600;
   font-size: 12px;
+  opacity: 25%;
   /*interact*/
   cursor: pointer;
 }
@@ -134,17 +203,27 @@ article {
 
 .InputOption > input:checked + label {
   /*frame*/
-  padding: 0 8px;
+  padding: 0 12px;
   min-width: 36px;
   /*theme*/
-  background-color: white;
-  outline: 2px solid grey;
+  background-color: var(--transparent25-light);
+  outline: 2px solid var(--transparent25-light);
+  opacity: 100%;
 }
 
 .Guide {
-  background-color: white;
   width: 100%;
   height: 100px;
+  color: var(--main-text);
+  padding: 10px;
+}
+
+.Subtotal > span {
+  /*frame*/
+  padding: 4px 8px;
+  /*theme*/
+  border-radius: 24px;
+  background-color: var(--button-InputOption-green);
 }
 
 #GuidesBlack + label, #BumpersBlack + label, #ShoesBlack + label, #BladesBlack + label {

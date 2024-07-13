@@ -9,13 +9,13 @@ function Object3D({ texture }) {
   return (
     <div className='CanvasContainer'>
       <Canvas>
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={0.2} />
         <pointLight position={[35, 35, 0]} intensity={0.4} />
         <pointLight position={[-35, 35, 0]} intensity={0.4} />
         <Suspense fallback={null}>
           <Hat2 texture={texture} />
         </Suspense>
-        <OrbitControls />
+        <OrbitControls minDistance={1.8} maxDistance={2.8} />
       </Canvas>
     </div>
   );

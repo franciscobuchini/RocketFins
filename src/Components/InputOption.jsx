@@ -2,6 +2,13 @@
 import React from 'react';
 
 function InputOption({ setTexture, texturePath, id, name, text, onClick }) {
+
+  const handleChange = () => {
+    if (setTexture) {
+      setTexture(texturePath);
+    }
+  };
+
   return (
     <div className='InputOption'>
       <input 
@@ -9,7 +16,7 @@ function InputOption({ setTexture, texturePath, id, name, text, onClick }) {
         id={id} 
         name={name} 
         value={texturePath} 
-        onChange={() => setTexture(texturePath)}
+        onChange={setTexture ? handleChange : null}
         onClick={onClick}
       />
       <label htmlFor={id}>{text}</label>

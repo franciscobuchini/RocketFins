@@ -1,5 +1,5 @@
 import Home from './Views/Home'
-import Tienda from './Views/Tienda';
+import Store from './Views/Store';
 import Navbar from './Components/Navbar';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -7,10 +7,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <Router>
-      <div>
+      <div className='Main'>
         <Navbar />
         <Routes>
-          <Route path="/Tienda" element={<Tienda />} />
+          <Route path="/Store" element={<Store />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
