@@ -3,8 +3,8 @@ import React from 'react';
 import { useGLTF, useTexture } from '@react-three/drei';
 
 export default function Hat2({ texture }) {
-  const { nodes, materials } = useGLTF('../Models/hat2.gltf'); // Corrected path
-  const mapTexture = useTexture(`../Models/Textures/${texture}.png`); // Corrected path
+  const { nodes, materials } = useGLTF('../Public/Models/hat2.gltf'); // Corrected path
+  const mapTexture = useTexture(`../Public/Models/Textures/${texture}.png`); // Corrected path
   
   return (
     <group dispose={null}>
@@ -16,4 +16,4 @@ export default function Hat2({ texture }) {
   );
 }
 
-useGLTF.preload('../Models/hat2.gltf'); // Corrected path
+useGLTF.preload('../Public/Models/hat2.gltf'); // Corrected path
