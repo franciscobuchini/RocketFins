@@ -33,76 +33,82 @@ function Store() {
   return (
     <>
       <article>
-        <Object3D texture={texture} />
-        <div className='OptionsRow'>
+        <div className='ObjectAndButtons'>
+          <Object3D texture={texture} />
+          <div className='OptionsRow'>
+            <div className='ButtonsRow'>
+              <label>Shoes size:</label>
+              <InputOption id='SizeS' name='Size' text='S' onClick={() => guideTextChange(`${textGuide_size}`)}/>
+              <InputOption id='SizeM' name='Size' text='M' onClick={() => guideTextChange(`${textGuide_size}`)}/>
+              <InputOption id='SizeL' name='Size' text='L' onClick={() => guideTextChange(`${textGuide_size}`)}/>
+              <InputOption id='SizeXL' name='Size' text='XL' onClick={() => guideTextChange(`${textGuide_size} `)}/>
+            </div>
 
-          <div className='ButtonsRow'>
-            <label>Shoes size:</label>
-            <InputOption id='SizeS' name='Size' text='S' onClick={() => guideTextChange(`${textGuide_size}`)}/>
-            <InputOption id='SizeM' name='Size' text='M' onClick={() => guideTextChange(`${textGuide_size}`)}/>
-            <InputOption id='SizeL' name='Size' text='L' onClick={() => guideTextChange(`${textGuide_size}`)}/>
-            <InputOption id='SizeXL' name='Size' text='XL' onClick={() => guideTextChange(`${textGuide_size} `)}/>
-          </div>
+            <div className='ButtonsRow'>
+              <label>Blade area:</label>
+              <InputOption id='AreaUWH' name='Area' text='UWH' onClick={() => guideTextChange(`${textGuide_bladeArea}`)} />
+              <InputOption id='AreaUWR' name='Area' text='UWR' onClick={() => guideTextChange(`${textGuide_bladeArea}`)} />
+            </div>
 
-          <div className='ButtonsRow'>
-            <label>Blade area:</label>
-            <InputOption id='AreaUWH' name='Area' text='UWH' onClick={() => guideTextChange(`${textGuide_bladeArea}`)} />
-            <InputOption id='AreaUWR' name='Area' text='UWR' onClick={() => guideTextChange(`${textGuide_bladeArea}`)} />
-          </div>
+            <div className='ButtonsRow'>
+              <label>Blade stiffness:</label>
+              <InputOption id='StiffnessSoft' name='Stiffness' text='Soft' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
+              <InputOption id='StiffnessMedium' name='Stiffness' text='Medium' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
+              <InputOption id='StiffnessHard' name='Stiffness' text='Hard' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
+              <InputOption id='StiffnessExtraHard' name='Stiffness' text='Extra Hard' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
+            </div>
 
-          <div className='ButtonsRow'>
-            <label>Blade stiffness:</label>
-            <InputOption id='StiffnessSoft' name='Stiffness' text='Soft' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
-            <InputOption id='StiffnessMedium' name='Stiffness' text='Medium' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
-            <InputOption id='StiffnessHard' name='Stiffness' text='Hard' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
-            <InputOption id='StiffnessExtraHard' name='Stiffness' text='Extra Hard' onClick={() => guideTextChange(`${textGuide_bladeStiffness}`)}/>
-          </div>
+            <div className='ButtonsRow'>
+              <label>Blades color:</label>
+              <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option1" id='BladesBlack' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
+              <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option2" id='BladesBlue' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
+              <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option9" id='BladesPink' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
+              <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option8" id='BladesIvory' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
+            </div>
 
-          <div className='ButtonsRow'>
-            <label>Blades color:</label>
-            <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option1" id='BladesBlack' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
-            <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option2" id='BladesBlue' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
-            <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option9" id='BladesPink' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
-            <InputOption setTexture={(texture) => { setTexture(texture); setBladesTexture(texture); }} texturePath="option8" id='BladesIvory' name='Blades'  onClick={() => guideTextChange(`${textGuide_bladesColor}`)}/>
-          </div>
+            <div className='ButtonsRow'>
+              <label>Shoes color:</label>
+              <InputOption setTexture={setTexture} texturePath="option1" id='ShoesBlack' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option4" id='ShoesWhite' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option2" id='ShoesBlue' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option3" id='ShoesYellow' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
 
-          <div className='ButtonsRow'>
-            <label>Shoes color:</label>
-            <InputOption setTexture={setTexture} texturePath="option1" id='ShoesBlack' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option4" id='ShoesWhite' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option2" id='ShoesBlue' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option3" id='ShoesYellow' name='Shoes' onClick={() => guideTextChange(`${textGuide_shoesColor}`)}/>
-
-          </div>
-          
-          <div className='ButtonsRow'>
-            <label>Bumpers color:</label>
-            <InputOption setTexture={setTexture} texturePath="option1" id='BumpersBlack' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option2" id='BumpersBlue' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option3" id='BumpersYellow' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option5" id='BumpersGreen' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option6" id='BumpersRed' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option7" id='BumpersOrange' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
-          </div>
-          
-          <div className='ButtonsRow'>
-            <label>Guides color:</label>
-            <InputOption setTexture={setTexture} texturePath="option1" id='GuidesBlack' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option2" id='GuidesBlue' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option3" id='GuidesYellow' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option4" id='GuidesWhite' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option5" id='GuidesGreen' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option6" id='GuidesRed' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option7" id='GuidesOrange' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
-            <InputOption setTexture={setTexture} texturePath="option9" id='GuidesPink' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+            </div>
+            
+            <div className='ButtonsRow'>
+              <label>Bumpers color:</label>
+              <InputOption setTexture={setTexture} texturePath="option1" id='BumpersBlack' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option2" id='BumpersBlue' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option3" id='BumpersYellow' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option5" id='BumpersGreen' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option6" id='BumpersRed' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option7" id='BumpersOrange' name='Bumpers' onClick={() => guideTextChange(`${textGuide_bumpersColor}`)}/>
+            </div>
+            
+            <div className='ButtonsRow'>
+              <label>Guides color:</label>
+              <InputOption setTexture={setTexture} texturePath="option1" id='GuidesBlack' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option2" id='GuidesBlue' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option3" id='GuidesYellow' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option4" id='GuidesWhite' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option5" id='GuidesGreen' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option6" id='GuidesRed' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option7" id='GuidesOrange' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+              <InputOption setTexture={setTexture} texturePath="option9" id='GuidesPink' name='Guides' onClick={() => guideTextChange(`${textGuide_guidesColor}`)}/>
+            </div>
           </div>
         </div>
         <div className='Guide'> {guideText} </div>
+      <div className='Footer'>
         <div className='Subtotal'>
-            <label>Subtotal: </label>
-            <span>USD {price}</span>
-          </div>
+          <label>Subtotal: </label>
+          <span>USD {price}</span>
+        </div>
+        <button> Continue </button>
+      </div>
+        
       </article>
+      
     </>
   );
 }
