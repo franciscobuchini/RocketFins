@@ -56,12 +56,12 @@ body { min-height: 100dvh; }
   flex-direction: column;
   /*frame*/
   gap: 60px;
+  margin: 100px 0;
 }
   
 body {
   /*colors*/
   background-color: var(--main-background);
-
 }
 
 nav {
@@ -74,6 +74,7 @@ nav {
   /*frame*/
   width: 100svw;
   padding: 30px;
+  margin: -100px 0;
   /*colors*/
   background-color: var(--main-background);
 }
@@ -116,6 +117,7 @@ nav > img {
 
 article {
   /*position*/
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,14 +125,13 @@ article {
   border-radius: 30px;
   /*colors*/
   background-color: var(--dark-article);
-  box-shadow: 0 0 18px -6px var(--button-InputOption-black);
+  /* box-shadow: 0 0 12px -6px var(--button-InputOption-black); */
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
     width: 100%;
     padding: 30px 20px;
     gap: 20px;
-    margin: 100px 0;
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -138,10 +139,73 @@ article {
     width: 768px;
     padding: 30px;
     gap: 30px;
-    margin: 100px auto 50px;
+    margin: 0 auto;
   }
 }
 
+button {
+  /*frame*/
+  border-radius: 24px;
+  font-weight: 600;
+  padding: 8px 12px;
+  /*interact*/
+  cursor: pointer;
+  /*colors*/
+  background-color: var(--button-InputOption-green);
+}
+
+button[disabled] {
+  /*interact*/  
+  cursor: not-allowed;
+  /*colors*/
+  background-color: var(--transparent25-light);
+}
+
+/*HOME VIEW*/
+
+#goToOrder > img {
+  /*frame*/
+  margin: -30px -20px;
+  /*colors*/
+  filter: drop-shadow(0 0 6px var(--button-InputOption-black));
+}
+
+#goToOrder:hover {
+  > img {
+    /*interact*/
+    scale: 1.06;
+  }
+}
+
+#goToOrder > button {
+  /*position*/
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+
+#goToOrder > h1 {
+  /*position*/
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+#goToOrder {
+  position: relative;
+  overflow: hidden;
+  
+   -webkit-animation: ani2 0.7s steps(22) forwards;
+   animation: ani2 0.7s steps(22) forwards;
+ 
+   &:hover {
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
+   }
+  }
+ }
+
+/*ORDER VIEW*/
 .ObjectAndButtons {
   /*position*/
   display: flex;
@@ -169,7 +233,8 @@ article {
   overflow: hidden;
   cursor: grab;
   /*colors*/
-  outline: 4px solid var(--main-background);
+  border: 2px solid var(--main-background);
+  background-color: var(--dark);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
@@ -178,7 +243,7 @@ article {
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    width: 330px;
+    min-width: 330px;
   }
 }
 
@@ -202,7 +267,18 @@ article {
   /*frame*/
   gap: 18px;
   height: 500px;
-  width: 330px;
+  /*interact*/
+  user-select: none;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+  /*frame*/
+  width: 100%;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    width: 330px;
+  }
 }
 
 .ButtonsRow {
@@ -292,25 +368,6 @@ article {
 .Footer > .Subtotal > span {
   /*frame*/
   font-weight: 700;
-}
-
-button {
-  /*frame*/
-  border-radius: 24px;
-  font-weight: 600;
-  font-size: 12px;
-  padding: 8px 12px;
-  /*interact*/
-  cursor: pointer;
-  /*colors*/
-  background-color: var(--button-InputOption-green);
-}
-
-button[disabled] {
-  /*interact*/  
-  cursor: not-allowed;
-  /*colors*/
-  background-color: var(--transparent25-light);
 }
 
 #GuidesBlack + label, #BumpersBlack + label, #ShoesBlack + label, #BladesBlack + label {
