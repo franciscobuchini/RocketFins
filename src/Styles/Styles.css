@@ -163,18 +163,18 @@ button[disabled] {
 
 /*HOME VIEW*/
 
-#goToOrder > img {
-  /*frame*/
-  margin: -30px -20px;
-  /*colors*/
-  filter: drop-shadow(0 0 6px var(--button-InputOption-black));
-}
-
 #goToOrder:hover {
   > img {
     /*interact*/
     scale: 1.06;
   }
+}
+
+#goToOrder > img {
+  /*frame*/
+  margin: -30px -20px;
+  /*colors*/
+  filter: drop-shadow(0 0 6px var(--button-InputOption-black));
 }
 
 #goToOrder > button {
@@ -190,20 +190,6 @@ button[disabled] {
   top: 30px;
   left: 20px;
 }
-
-#goToOrder {
-  position: relative;
-  overflow: hidden;
-  
-   -webkit-animation: ani2 0.7s steps(22) forwards;
-   animation: ani2 0.7s steps(22) forwards;
- 
-   &:hover {
-    -webkit-animation: ani 0.7s steps(22) forwards;
-    animation: ani 0.7s steps(22) forwards;
-   }
-  }
- }
 
 /*ORDER VIEW*/
 .ObjectAndButtons {
