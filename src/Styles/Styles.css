@@ -41,6 +41,7 @@ body { min-height: 100dvh; }
 
   --main-background: var(--dark);
   --main-text: var(--light);
+  --main-primary: var(--button-InputOption-green);
 }
 /*VARIABLES*/
 
@@ -137,7 +138,7 @@ article {
     width: 768px;
     padding: 30px;
     gap: 30px;
-    margin: 120px auto 50px;
+    margin: 100px auto 50px;
   }
 }
 
@@ -219,6 +220,13 @@ article {
   font-weight: 500;
 }
 
+.ButtonsRow > label > span {
+  /*frame*/
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .InputOption > label {
   /*position*/
   display: flex;
@@ -257,16 +265,16 @@ article {
 .Guide {
   /*frame*/
   width: fit-content;
-  height: min-content;
-  
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
+    height: min-content;
     padding: 0;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
+    height: 60px;
     padding: 0 30px;
   }
 }
@@ -286,16 +294,23 @@ article {
   font-weight: 700;
 }
 
-.Footer > button {
-    /*frame*/
-    border-radius: 24px;
-    font-weight: 600;
-    font-size: 12px;
-    padding: 4px 8px;
-    /*interact*/
-    cursor: pointer;
-    /*colors*/
-    background-color: var(--button-InputOption-green);
+button {
+  /*frame*/
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 8px 12px;
+  /*interact*/
+  cursor: pointer;
+  /*colors*/
+  background-color: var(--button-InputOption-green);
+}
+
+button[disabled] {
+  /*interact*/  
+  cursor: not-allowed;
+  /*colors*/
+  background-color: var(--transparent25-light);
 }
 
 #GuidesBlack + label, #BumpersBlack + label, #ShoesBlack + label, #BladesBlack + label {

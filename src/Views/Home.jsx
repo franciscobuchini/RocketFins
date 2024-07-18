@@ -13,6 +13,7 @@ function Home() {
         <p>FAQ</p>
         <p>PDF info</p>
         <p>Shipping Information</p>
+        <p>Dark & Light theme</p>
       </article>
     </>
   );
