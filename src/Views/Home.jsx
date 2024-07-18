@@ -1,14 +1,20 @@
 // Home.jsx
 import img01 from '../Assets/img01.webp'
+import img02 from '../Assets/img02.webp'
+
+import { Link } from 'react-router-dom';
 
 function Home() {
 
   return (
     <>
       <article id='goToOrder'>
-        <img src={img01}/>
+        <img className='ImgB' src={img02}/>
+        <img className='ImgF' src={img01}/>
         <h1> Design your own fins </h1>
-        <button>Let's do it</button>
+        <Link className='buttonLink' to="/store">
+          <button>Let's do it</button>
+        </Link>
       </article>
       <article>
         <p>Blog section: New releases, next dates.</p>

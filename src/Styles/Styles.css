@@ -49,6 +49,8 @@ body { min-height: 100dvh; }
   /*frame*/
   /*colors*/
   /*interact*/
+  /*responsive-mobile*/
+  /*responsive-pc*/
 
 .Main {
   /*position*/
@@ -163,21 +165,42 @@ button[disabled] {
 
 /*HOME VIEW*/
 
+#goToOrder {
+  overflow: hidden;
+
+  max-height: 360px;
+}
+
 #goToOrder:hover {
-  > img {
+  > .ImgF {
     /*interact*/
-    scale: 1.06;
+    scale: 1.1;
+  }
+  > .ImgB {
+    /*interact*/
+    opacity: 0.1;
   }
 }
 
-#goToOrder > img {
+.ImgF {
   /*frame*/
-  margin: -30px -20px;
+  
   /*colors*/
   filter: drop-shadow(0 0 6px var(--button-InputOption-black));
 }
 
-#goToOrder > button {
+.ImgB {
+  /*position*/
+  position: absolute;
+  /*frame*/
+  border-radius: 30px;
+  margin: -10px -30px;
+  /*colors*/
+  filter: drop-shadow(0 0 6px var(--button-InputOption-black));
+  opacity: 0.5;
+}
+
+#goToOrder > .buttonLink  > button {
   /*position*/
   position: absolute;
   bottom: 30px;
