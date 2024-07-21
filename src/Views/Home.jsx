@@ -20,6 +20,7 @@ function Home() {
         <p>* Shipping Information</p>
         <p>* FAQ</p>
         <p>Contact Information</p>
+        <p>Language Switcher</p>
         <p>Blog section: New releases, next dates.</p>
         <p>Instagram API</p>
         <p>Other products</p>
