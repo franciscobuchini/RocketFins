@@ -25,6 +25,7 @@ function Home() {
         <p>PDF info</p>
         <p>Shipping Information</p>
         <p>Dark & Light theme</p>
+        <p>Support Ukraine</p>
       </article>
     </>
   );
