@@ -19,14 +19,14 @@ function Navbar() {
         <li className={location.pathname === '/FAQ' ? 'active' : ''}>
           <Link to="/FAQ">FAQ</Link>
         </li>
-        <select>
-          <option value="english"> EN </option>
-          <option value="spanish"> ES </option>
-          <option value="french"> FR </option>
-        </select>
         <select id="select-theme">
-          <option value="light"> ☀️ </option>
-          <option value="dark"> 🌘 </option>
+          <option value="light"> Light </option>
+          <option value="dark"> Dark </option>
+        </select>
+        <select>
+          <option value="english"> English </option>
+          <option value="spanish"> Español </option>
+          <option value="french"> Français </option>
         </select>
       </ul>
     </nav>

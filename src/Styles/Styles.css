@@ -128,10 +128,9 @@ nav > ul > li > a {
   padding: 8px 12px;
 }
 
-nav > ul > #select-theme {
+nav > ul > select {
   /*frame*/
-  font-size: 18px;
-  padding: 0 0 3px 0;
+  padding: 8px 8px;
 }
 
 nav > ul > li.active {
@@ -171,7 +170,7 @@ nav > img {
   font-style: italic;
   /*responsive-mobile*/
   @media (width <= 768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
