@@ -8,10 +8,12 @@ function Home() {
 
   return (
     <>
+      <article id='Title'>
+        <h1>Next-Gen Fins</h1>
+      </article>
+
       <article id='goToOrder'>
-        <img className='ImgB' src={img02}/>
-        <img className='ImgF' src={img01}/>
-        <h1> Design your own fins </h1>
+        <h2> Design your own fins </h2>
         <Link className='buttonLink' to="/store">
           <button>Let's do it</button>
         </Link>
@@ -25,7 +27,6 @@ function Home() {
         <p>Instagram API</p>
         <p>Other products</p>
         <p>PDF info</p>
-        <p>Dark & Light theme</p>
         <p>Support Ukraine</p>
       </article>
     </>
