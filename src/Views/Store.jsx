@@ -6,7 +6,7 @@ import InputOption from "../Components/InputOption";
 function Store() {
   const [texture, setTexture] = useState('option5');
   const [bladesTexture, setBladesTexture] = useState('option1');
-  const [price, setPrice] = useState(230);
+  const [price, setPrice] = useState(280);
   const [guideText, setGuideText] = useState('');
 
   const [sizeSelected, setSizeSelected] = useState(false);
@@ -35,7 +35,7 @@ function Store() {
     if (bladesTexture === 'option1') {
       setPrice(230);
     } else {
-      setPrice(280);
+      setPrice(330);
     }
   }, [bladesTexture]);
 

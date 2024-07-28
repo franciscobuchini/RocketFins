@@ -28,7 +28,6 @@ body { min-height: 100dvh; }
   --dark: #242527;
   --light: #dddddd;
   --dark-article: #26282D;
-  --primary: #3FBC92;
 
   --button-InputOption-black: #191B1D ;
   --button-InputOption-blue: #2C7CBF;
@@ -49,6 +48,7 @@ body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #bdbdbd;
     --shadow2: #ededed;
+    --primary: #00ad74;
   }
 
   body:has(option[value="dark"]:checked){
@@ -57,6 +57,7 @@ body { min-height: 100dvh; }
     --transparent25: #F5F5F710;
     --shadow1: #1f1f21;
     --shadow2: #292b2d;
+    --primary: #3FBC92;
   }
 }
 /*VARIABLES*/
@@ -133,9 +134,9 @@ nav > ul > select {
   padding: 8px 8px;
 }
 
-nav > ul > li.active {
+nav > ul > li.active > a {
   /*colors*/
-  background-color: var(--primary);
+  color: var(--primary);
 }
 
 nav > img {
@@ -152,14 +153,10 @@ nav > img {
 }
 
 #Title {
-  /*position*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   /*colors*/
   box-shadow: none;
   /*frame*/
-  padding: 0;
+  padding: 30px 0;
 }
 
 #Title > h1 {
@@ -168,6 +165,9 @@ nav > img {
   /*frame*/
   font-weight: 900;
   font-style: italic;
+  /*colors*/
+  color: var(--primary);
+  text-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
   /*responsive-mobile*/
   @media (width <= 768px) {
     font-size: 30px;
@@ -238,7 +238,7 @@ button[disabled] {
   /*interact*/  
   cursor: not-allowed;
   /*colors*/
-  background-color: var(--transparent25);
+  background-color: var(--main-background);
 }
 
 /*ORDER VIEW*/
@@ -349,7 +349,7 @@ button[disabled] {
   font-size: 12px;
   /*colors*/
   border-radius: 24px;
-
+  border: 2px solid var(--main-background);
   outline: 2px solid var(--transparent25);
   opacity: 25%;
   /*interact*/
@@ -366,10 +366,10 @@ button[disabled] {
   padding: 0 12px;
   min-width: 36px;
   /*colors*/
-  background-color: var(--transparent25);
-  outline: 2px solid var(--transparent25);
+  background-color: var(--shadow2);
   opacity: 100%;
   box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  color: var(--primary);
 }
 
 .Guide {
@@ -396,7 +396,7 @@ button[disabled] {
   /*frame*/
   padding: 30px 30px 0;
   /*colors*/
-  border-top: 2px solid var(--transparent25);
+  border-top: 2px solid var(--shadow1);
 }
 
 .Footer > .Subtotal > span {
