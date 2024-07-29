@@ -27,7 +27,8 @@ body { min-height: 100dvh; }
 :root {
   --dark: #242527;
   --light: #dddddd;
-  --dark-article: #26282D;
+  --dark-transparent: #24252750;
+  --light-transparent: #dddddd50;
 
   --button-InputOption-black: #191B1D ;
   --button-InputOption-blue: #2C7CBF;
@@ -45,15 +46,17 @@ body { min-height: 100dvh; }
   body:has(option[value="light"]:checked){
     --main-background: var(--light);
     --main-text: var(--dark);
+    --main-transparent: var(--light-transparent);
     --transparent25: #ffffff80;
     --shadow1: #bdbdbd;
     --shadow2: #ededed;
-    --primary: #00ad74;
+    --primary: #3FBC92;
   }
 
   body:has(option[value="dark"]:checked){
     --main-background: var(--dark);
     --main-text: var(--light);
+    --main-transparent: var(--dark-transparent);
     --transparent25: #F5F5F710;
     --shadow1: #1f1f21;
     --shadow2: #292b2d;
@@ -87,7 +90,8 @@ nav {
   padding: 30px 60px;
   margin: -120px 0;
   /*colors*/
-  background-color: var(--main-background);
+  background-color: var(--main-transparent);
+  backdrop-filter: blur(12px);
   /*responsive-mobile*/
   @media (width <= 768px) {
     justify-content: center;
@@ -152,13 +156,6 @@ nav > img {
   }
 }
 
-#Title {
-  /*colors*/
-  box-shadow: none;
-  /*frame*/
-  padding: 30px 0;
-}
-
 #Title > h1 {
   /*position*/
   text-align: center;
@@ -170,11 +167,12 @@ nav > img {
   text-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
   /*responsive-mobile*/
   @media (width <= 768px) {
-    font-size: 30px;
+    font-size: 60px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     font-size: 80px;
+    margin: 80px 0;
   }
 }
 
@@ -186,6 +184,8 @@ nav > img {
     /*frame*/
     width: min(400px, 90%);
     margin: 0 auto;
+    /*colors*/
+    filter: drop-shadow(7px 7px 14px var(--shadow1)) , drop-shadow(-7px -7px 14px var(--shadow2));
   }
   /*responsive-pc*/
   @media (width > 768px) {

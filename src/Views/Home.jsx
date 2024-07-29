@@ -1,7 +1,5 @@
 // Home.jsx
-import img01 from '../Assets/img01.webp'
-import img02 from '../Assets/img02.webp'
-import logo from '../Assets/logo.webp'
+import logo from '../Assets/logo.svg'
 
 import { Link } from 'react-router-dom';
 
@@ -9,10 +7,10 @@ function Home() {
 
   return (
     <>
-      <article id='Title'>
+      <div id='Title'>
         <img src={logo}/>
         <h1>The Next-Gen Fins</h1>
-      </article>
+      </div>
 
       <article id='goToOrder'>
         <h2> Design your own fins </h2>
