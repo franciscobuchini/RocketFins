@@ -33,7 +33,7 @@ function Store() {
 
   useEffect(() => {
     if (bladesTexture === 'option1') {
-      setPrice(230);
+      setPrice(280);
     } else {
       setPrice(330);
     }

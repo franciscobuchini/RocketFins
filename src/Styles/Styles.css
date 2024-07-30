@@ -46,7 +46,7 @@ body { min-height: 100dvh; }
   body:has(option[value="light"]:checked){
     --main-background: var(--light);
     --main-text: var(--dark);
-    --main-transparent: var(--light-transparent);
+    --main-transparent: var(--dark-transparent);
     --transparent25: #ffffff80;
     --shadow1: #bdbdbd;
     --shadow2: #ededed;
@@ -56,7 +56,7 @@ body { min-height: 100dvh; }
   body:has(option[value="dark"]:checked){
     --main-background: var(--dark);
     --main-text: var(--light);
-    --main-transparent: var(--dark-transparent);
+    --main-transparent: var(--light-transparent);
     --transparent25: #F5F5F710;
     --shadow1: #1f1f21;
     --shadow2: #292b2d;
@@ -89,16 +89,19 @@ nav {
   width: 100%;
   padding: 30px 60px;
   margin: -120px 0;
-  /*colors*/
-  background-color: var(--main-transparent);
-  backdrop-filter: blur(12px);
   /*responsive-mobile*/
   @media (width <= 768px) {
+    /*position*/
     justify-content: center;
+    /*colors*/
+    background-color: var(--main-background);
   }
   /*responsive-pc*/
   @media (width > 768px) {
+    /*position*/
     justify-content: space-between;
+    /*colors*/
+    background-color: var(--main-background);
   }
 }
 
@@ -164,16 +167,37 @@ nav > img {
   font-style: italic;
   /*colors*/
   color: var(--primary);
-  text-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  /*interact*/
+  cursor: default;
+  user-select: none;
   /*responsive-mobile*/
   @media (width <= 768px) {
-    font-size: 60px;
+    font-size: 32px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
-    font-size: 80px;
-    margin: 80px 0;
+    font-size: 72px;
+    margin: 84px 0;
   }
+}
+
+#Title > h1 > .word-span {
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    padding: 0 4px;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    padding: 0 10px;
+  }
+}
+
+#Title > h1 > .word-span > .letter-span {
+  padding: 0 1px;
+}
+
+#Title > h1 > .word-span > .letter-span:hover {
+  color: var(--primary);
 }
 
 #Title > img {
@@ -231,6 +255,7 @@ button {
   cursor: pointer;
   /*colors*/
   background-color: var(--primary);
+  color: var(--main-background);
   box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
 }
 
@@ -239,6 +264,7 @@ button[disabled] {
   cursor: not-allowed;
   /*colors*/
   background-color: var(--main-background);
+  color: var(--main-transparent);
 }
 
 /*ORDER VIEW*/
