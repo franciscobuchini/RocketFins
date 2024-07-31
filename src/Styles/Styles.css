@@ -50,6 +50,8 @@ body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #bdbdbd;
     --shadow2: #ededed;
+    --box-shadow1: 6px 6px 12px var(--shadow1);
+    --box-shadow2: -6px -6px 12px var(--shadow2);
     --primary: #3FBC92;
   }
 
@@ -60,8 +62,12 @@ body { min-height: 100dvh; }
     --transparent25: #F5F5F710;
     --shadow1: #1f1f21;
     --shadow2: #292b2d;
+    --box-shadow1: 6px 6px 12px var(--shadow1);
+    --box-shadow2: -6px -6px 12px var(--shadow2);
     --primary: #3FBC92;
   }
+
+
 }
 /*VARIABLES*/
 
@@ -110,7 +116,7 @@ nav > ul {
   display: flex;
   justify-content: center;
   /*frame*/
-  gap: 10px;
+  gap: 12px;
 }
 
 nav > ul > li,
@@ -128,17 +134,17 @@ nav > ul > select {
   cursor: pointer;
   /*colors*/
   background-color: var(--main-background);
-  box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  box-shadow: var(--box-shadow1), var(--box-shadow2);
 }
 
 nav > ul > li > a {
   /*frame*/
-  padding: 8px 12px;
+  padding: 6px 12px;
 }
 
 nav > ul > select {
   /*frame*/
-  padding: 8px 8px;
+  padding: 6px;
 }
 
 nav > ul > li.active > a {
@@ -184,16 +190,12 @@ nav > img {
 #Title > h1 > .word-span {
   /*responsive-mobile*/
   @media (width <= 768px) {
-    padding: 0 4px;
+    padding: 0 6px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
-    padding: 0 10px;
+    padding: 0 12px;
   }
-}
-
-#Title > h1 > .word-span > .letter-span {
-  padding: 0 1px;
 }
 
 #Title > h1 > .word-span > .letter-span:hover {
@@ -208,8 +210,6 @@ nav > img {
     /*frame*/
     width: min(400px, 90%);
     margin: 0 auto;
-    /*colors*/
-    filter: drop-shadow(7px 7px 14px var(--shadow1)) , drop-shadow(-7px -7px 14px var(--shadow2));
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -229,12 +229,12 @@ article {
   width: min(752px, 100%);
   /*colors*/
   background-color: var(--main-background);
-  box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  box-shadow: var(--box-shadow1), var(--box-shadow2);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    padding: 30px 20px;
-    gap: 20px;
+    padding: 30px 18px;
+    gap: 24px;
     margin: 0;
   }
   /*responsive-pc*/
@@ -250,13 +250,13 @@ button {
   /*frame*/
   border-radius: 24px;
   font-weight: 600;
-  padding: 8px 12px;
+  padding: 12px;
   /*interact*/
   cursor: pointer;
   /*colors*/
   background-color: var(--primary);
   color: var(--main-background);
-  box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  box-shadow: var(--box-shadow1), var(--box-shadow2);
 }
 
 button[disabled] {
@@ -290,10 +290,12 @@ button[disabled] {
 .CanvasContainer {
   /*frame*/
   height: 500px;
-  border-radius: 10px;
+  border-radius: 12px;
   /*interact*/
   overflow: hidden;
   cursor: grab;
+  /*colors*/
+  background-color: var(--shadow2);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
@@ -324,7 +326,7 @@ button[disabled] {
   justify-content: center;
   flex-wrap: wrap;
   /*frame*/
-  gap: 18px;
+  gap: 24px;
   height: 500px;
   /*interact*/
   user-select: none;
@@ -345,7 +347,7 @@ button[disabled] {
   display: flex;
   flex-wrap: wrap;
    /*frame*/
-   gap: 6px 10px;
+   gap: 6px 12px;
 }
 
 .ButtonsRow > label {
@@ -370,7 +372,7 @@ button[disabled] {
   /*frame*/
   height: 24px;
   min-width: 24px;
-  padding: 0 8px;
+  padding: 0 6px;
   font-weight: 600;
   font-size: 12px;
   /*colors*/
@@ -394,7 +396,7 @@ button[disabled] {
   /*colors*/
   background-color: var(--shadow2);
   opacity: 100%;
-  box-shadow:  7px 7px 14px var(--shadow1), -7px -7px 14px var(--shadow2);
+  box-shadow: var(--box-shadow1), var(--box-shadow2);
   color: var(--primary);
 }
 
