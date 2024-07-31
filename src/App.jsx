@@ -16,6 +16,10 @@ function App() {
           <Route path="/FAQ" element={<FAQ />} />
         </Routes>
       </div>
+      <div className="background">
+        <div></div>
+        <div></div>
+      </div>
     </Router>
   );
 }
