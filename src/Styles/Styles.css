@@ -40,8 +40,13 @@ body { min-height: 100dvh; }
   --button-InputOption-ivory: #B6C994;
   --button-InputOption-pink: #E961A3;
 
-  --main-background: var(--dark);
-  --main-text: var(--light);
+  --size-xxs: 6px;
+  --size-xs: 12px;
+  --size-s: 18px;
+  --size-m: 24px;
+  --size-l: 30px;
+  --size-xl: 60px;
+  --size-xxl: 120px;
 
   body:has(option[value="light"]:checked){
     --main-background: var(--light);
@@ -50,8 +55,8 @@ body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #bdbdbd;
     --shadow2: #ededed;
-    --box-shadow1: 6px 6px 12px var(--shadow1);
-    --box-shadow2: -6px -6px 12px var(--shadow2);
+    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xs) var(--shadow1);
+    --box-shadow2: calc(-1 * var(--size-xxs)) calc(-1 * var(--size-xxs)) var(--size-xs) var(--shadow2);
     --primary: #3FBC92;
   }
 
@@ -62,12 +67,10 @@ body { min-height: 100dvh; }
     --transparent25: #F5F5F710;
     --shadow1: #1f1f21;
     --shadow2: #292b2d;
-    --box-shadow1: 6px 6px 12px var(--shadow1);
-    --box-shadow2: -6px -6px 12px var(--shadow2);
+    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xs) var(--shadow1);
+    --box-shadow2: calc(-1 * var(--size-xxs)) calc(-1 * var(--size-xxs)) var(--size-xs) var(--shadow2);
     --primary: #3FBC92;
   }
-
-
 }
 /*VARIABLES*/
 
@@ -76,8 +79,8 @@ body { min-height: 100dvh; }
   display: flex;
   flex-direction: column;
   /*frame*/
-  gap: 60px;
-  margin: 120px 0;
+  gap: var(--size-xl);
+  margin: var(--size-xxl) 0;
 }
   
 body {
@@ -93,8 +96,8 @@ nav {
   z-index: 1000;
   /*frame*/
   width: 100%;
-  padding: 30px 60px;
-  margin: -120px 0;
+  padding: var(--size-l) var(--size-xl);
+  margin: calc(-1 * var(--size-xxl)) 0;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*position*/
@@ -116,7 +119,7 @@ nav > ul {
   display: flex;
   justify-content: center;
   /*frame*/
-  gap: 12px;
+  gap: var(--size-xs);
 }
 
 nav > ul > li,
@@ -126,9 +129,9 @@ nav > ul > select {
   justify-content: center;
   align-items: center;
   /*frame*/
-  border-radius: 24px;
+  border-radius: var(--size-m);
   font-weight: 600;
-  font-size: 12px;
+  font-size: var(--size-xs);
 
   /*interact*/
   cursor: pointer;
@@ -139,12 +142,12 @@ nav > ul > select {
 
 nav > ul > li > a {
   /*frame*/
-  padding: 6px 12px;
+  padding: var(--size-xxs) var(--size-xs);
 }
 
 nav > ul > select {
   /*frame*/
-  padding: 6px;
+  padding: var(--size-xxs);
 }
 
 nav > ul > li.active > a {
@@ -154,7 +157,7 @@ nav > ul > li.active > a {
 
 nav > img {
   /*frame*/
-  height: 24px;
+  height: var(--size-m);
   /*responsive-mobile*/
   @media (width <= 768px) {
     display: none;
@@ -178,7 +181,7 @@ nav > img {
   user-select: none;
   /*responsive-mobile*/
   @media (width <= 768px) {
-    font-size: 32px;
+    font-size: var(--size-l);
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -190,11 +193,11 @@ nav > img {
 #Title > h1 > .word-span {
   /*responsive-mobile*/
   @media (width <= 768px) {
-    padding: 0 6px;
+    padding: 0 var(--size-xxs);
   }
   /*responsive-pc*/
   @media (width > 768px) {
-    padding: 0 12px;
+    padding: 0 var(--size-xs);
   }
 }
 
@@ -225,7 +228,7 @@ article {
   flex-direction: column;
   justify-content: center;
   /*frame*/
-  border-radius: 30px;
+  border-radius: var(--size-l);
   width: min(752px, 100%);
   /*colors*/
   background-color: var(--main-background);
@@ -233,24 +236,24 @@ article {
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    padding: 30px 18px;
-    gap: 24px;
+    padding: var(--size-l) var(--size-s);
+    gap: var(--size-m);
     margin: 0;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    padding: 30px;
-    gap: 30px;
+    padding: var(--size-l);
+    gap: var(--size-l);
     margin: 0 auto;
   }
 }
 
 button {
   /*frame*/
-  border-radius: 24px;
+  border-radius: var(--size-m);
   font-weight: 600;
-  padding: 12px;
+  padding: var(--size-xs);
   /*interact*/
   cursor: pointer;
   /*colors*/
@@ -274,7 +277,7 @@ button[disabled] {
   justify-content: center;
   align-items: center;
   /*frame*/
-  gap: 30px;
+  gap: var(--size-l);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*position*/
@@ -290,7 +293,7 @@ button[disabled] {
 .CanvasContainer {
   /*frame*/
   height: 500px;
-  border-radius: 12px;
+  border-radius: var(--size-xs);
   /*interact*/
   overflow: hidden;
   cursor: grab;
@@ -326,7 +329,7 @@ button[disabled] {
   justify-content: center;
   flex-wrap: wrap;
   /*frame*/
-  gap: 24px;
+  gap: var(--size-m);
   height: 500px;
   /*interact*/
   user-select: none;
@@ -347,7 +350,7 @@ button[disabled] {
   display: flex;
   flex-wrap: wrap;
    /*frame*/
-   gap: 6px 12px;
+   gap: var(--size-xxs) var(--size-xs);
 }
 
 .ButtonsRow > label {
@@ -370,13 +373,13 @@ button[disabled] {
   justify-content: center;
   align-items: center;
   /*frame*/
-  height: 24px;
-  min-width: 24px;
-  padding: 0 6px;
+  height: var(--size-m);
+  min-width: var(--size-m);
+  padding: 0 var(--size-xxs);
   font-weight: 600;
-  font-size: 12px;
+  font-size: var(--size-xs);
   /*colors*/
-  border-radius: 24px;
+  border-radius: var(--size-m);
   border: 2px solid var(--main-background);
   outline: 2px solid var(--transparent25);
   opacity: 25%;
@@ -391,7 +394,7 @@ button[disabled] {
 
 .InputOption > input:checked + label {
   /*frame*/
-  padding: 0 12px;
+  padding: 0 var(--size-xs);
   min-width: 36px;
   /*colors*/
   background-color: var(--shadow2);
@@ -412,8 +415,8 @@ button[disabled] {
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    height: 60px;
-    padding: 0 30px;
+    height: var(--size-xl);
+    padding: 0 var(--size-l);
   }
 }
 
@@ -422,7 +425,7 @@ button[disabled] {
   display: flex;
   justify-content: space-between;
   /*frame*/
-  padding: 30px 30px 0;
+  padding: var(--size-l) var(--size-l) 0;
   /*colors*/
   border-top: 2px solid var(--shadow1);
 }
