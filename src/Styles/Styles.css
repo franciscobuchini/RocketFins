@@ -77,7 +77,6 @@ nav {
   /*position*/
   display: flex;
   align-items: center;
-  position: fixed;
   z-index: 1000;
   /*frame*/
   width: 100%;
@@ -86,13 +85,17 @@ nav {
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*position*/
+    flex-direction: column;
     justify-content: center;
+    /*frame*/
+    gap: var(--size-m);
     /*colors*/
     background-color: var(--main-background);
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*position*/
+    position: fixed;
     justify-content: space-between;
     /*colors*/
     background-color: var(--main-background);
@@ -118,12 +121,20 @@ nav > ul > select {
   font-weight: 600;
   font-size: var(--size-xs);
   line-height: calc(var(--size-xs) * 1.6);
-
   /*interact*/
   cursor: pointer;
   /*colors*/
   background-color: var(--main-background);
-  box-shadow: var(--box-shadow1), var(--box-shadow2);
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*colors*/
+    box-shadow: none;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*colors*/
+    box-shadow: var(--box-shadow1), var(--box-shadow2);
+  }
 }
 
 nav > ul > li > a {
@@ -142,17 +153,15 @@ nav > ul > li.active > a {
 }
 
 nav > img {
-  /*frame*/
-  height: var(--size-m);
   /*responsive-mobile*/
   @media (width <= 768px) {
-    /*position*/
-    display: none;
+    /*frame*/
+    height: var(--size-xl);
   }
   /*responsive-pc*/
   @media (width > 768px) {
-    /*position*/
-    display: block;
+    /*frame*/
+    height: var(--size-m);
   }
 }
 /*NAVBAR*/
@@ -259,22 +268,6 @@ article {
   color: var(--primary);
   /*interact*/
   transition: 0.1s;
-}
-
-#Title > img {
-  /*responsive-mobile*/
-  @media (width <= 768px) {
-    /*position*/
-    display: flex;
-    /*frame*/
-    width: min(400px, 90%);
-    margin: 0 auto;
-  }
-  /*responsive-pc*/
-  @media (width > 768px) {
-    /*position*/
-    display: none;
-  }
 }
 
 button {
@@ -518,7 +511,7 @@ footer {
 
 footer > .footer {
   /*frame*/
-  height: 400px;
+  height: 200px;
   width: 100%;
   /*colors*/
   background-color: var(--primary);

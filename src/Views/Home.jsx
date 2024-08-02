@@ -1,6 +1,4 @@
 // Home.jsx
-import logo from '../Assets/logo.svg'
-
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -8,7 +6,6 @@ function Home() {
   return (
     <section>
       <div id='Title'>
-        <img src={logo}/>
         <h1>
           <span className='word-span'>
             <span className='letter-span'>T</span>
