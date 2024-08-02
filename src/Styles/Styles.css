@@ -152,7 +152,7 @@ nav > img {
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    height: var(--size-xl);
+    height: var(--size-l);
   }
   /*responsive-pc*/
   @media (width > 768px) {
