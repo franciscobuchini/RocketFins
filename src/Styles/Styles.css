@@ -221,29 +221,28 @@ article {
 }
 /*BODY*/
 
+#Title {
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*position*/
+    display: none;
+  }    
+}
+
 #Title > h1 {
   /*position*/
   text-align: center;
   /*frame*/
   font-weight: 900;
   font-style: italic;
+  font-size: var(--size-xl);
+  line-height: calc(var(--size-xl) * 1.2);
+  margin: var(--size-xxl) 0;
   /*colors*/
   color: var(--primary);
   /*interact*/
   cursor: default;
   user-select: none;
-  /*responsive-mobile*/
-  @media (width <= 768px) {
-    font-size: var(--size-l);
-    line-height: calc(var(--size-l) * 1.2);
-  }
-  /*responsive-pc*/
-  @media (width > 768px) {
-    /*frame*/
-    font-size: var(--size-xl);
-    line-height: calc(var(--size-xl) * 1.2);
-    margin: var(--size-xxl) 0;
-  }
 }
 
 #Title > h1 > .word-span {
