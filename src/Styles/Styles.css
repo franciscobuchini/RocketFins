@@ -6,7 +6,6 @@
   text-decoration: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--main-text);
-  transition: 0.3s;
   border-style: none;
 }
 
@@ -146,10 +145,12 @@ nav > img {
   height: var(--size-m);
   /*responsive-mobile*/
   @media (width <= 768px) {
+    /*position*/
     display: none;
   }
   /*responsive-pc*/
   @media (width > 768px) {
+    /*position*/
     display: block;
   }
 }
@@ -177,8 +178,10 @@ main {
 }
 
 section {
+  /*position*/
   display: flex;
   flex-direction: column;
+  /*frame*/
   gap: var(--size-xl);
 }
 
@@ -229,6 +232,7 @@ article {
   }
   /*responsive-pc*/
   @media (width > 768px) {
+    /*frame*/
     font-size: var(--size-xl);
     margin: var(--size-xxl) 0;
   }
@@ -237,16 +241,21 @@ article {
 #Title > h1 > .word-span {
   /*responsive-mobile*/
   @media (width <= 768px) {
+    /*frame*/
     padding: 0 var(--size-xxs);
   }
   /*responsive-pc*/
   @media (width > 768px) {
+    /*frame*/
     padding: 0 var(--size-xs);
   }
 }
 
 #Title > h1 > .word-span > .letter-span:hover {
+  /*colors*/
   color: var(--primary);
+  /*interact*/
+  transition: 0.1s;
 }
 
 #Title > img {
@@ -276,6 +285,11 @@ button {
   background-color: var(--primary);
   color: var(--main-background);
   box-shadow: var(--box-shadow1), var(--box-shadow2);
+}
+
+button:hover {
+  /*colors*/
+  outline: 2px solid var(--main-text);
 }
 
 button[disabled] {
@@ -403,6 +417,7 @@ button[disabled] {
   opacity: 25%;
   /*interact*/
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .InputOption > input {
