@@ -535,8 +535,19 @@ footer > .footer {
 }
 
 footer > .footer > img {
-  height: var(--size-xl);
-  width: min-content;
+
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    height: var(--size-l);
+    width: min-content;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    height: var(--size-xl);
+    width: min-content;
+  }
 }
 
 footer > .waves {
