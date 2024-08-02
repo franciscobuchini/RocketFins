@@ -164,8 +164,16 @@ nav > img {
 
 /*BODY*/
 body {
-  /*colors*/
-  background-color: var(--main-background);
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*colors*/
+    background-color: var(--shadow2);
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*colors*/
+    background-color: var(--main-background);
+  }
 }
 
 main {
@@ -199,7 +207,6 @@ article {
   justify-content: center;
   /*colors*/
   background-color: var(--main-background);
-  box-shadow: var(--box-shadow1), var(--box-shadow2);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
@@ -209,7 +216,6 @@ article {
     margin: 10px;
     width: auto;
     /*colors*/
-    background-color: var(--shadow2);
     box-shadow: none;
   }
   /*responsive-pc*/
@@ -221,7 +227,6 @@ article {
     margin: 0 auto;
     width: min(752px, 100%);
     /*colors*/
-    background-color: var(--main-background);
     box-shadow: var(--box-shadow1), var(--box-shadow2);
   }
 }
@@ -387,7 +392,6 @@ button[disabled] {
   width: 100%;
   font-size: var(--size-s);
   line-height: calc(var(--size-s) * 1.6);
-
   font-weight: 500;
 }
 
@@ -413,7 +417,7 @@ button[disabled] {
   /*colors*/
   border-radius: var(--size-m);
   border: 2px solid var(--main-background);
-  outline: 2px solid var(--transparent25);
+  outline: 1px solid var(--main-transparent);
   opacity: 25%;
   /*interact*/
   cursor: pointer;
