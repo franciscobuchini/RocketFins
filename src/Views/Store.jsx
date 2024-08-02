@@ -48,7 +48,7 @@ function Store() {
   const textGuide_guidesColor = 'Guides help fin stabilization, avoiding slide movements, and improving kick efficiency, while reducing water resistance and turbulence.';
 
   return (
-    <>
+    <section>
       <article>
         <div className='ObjectAndButtons'>
           <Object3D texture={texture} />
@@ -123,7 +123,7 @@ function Store() {
           <button disabled={!allOptionsSelected}> Continue </button>
         </div>
       </article>
-    </>
+    </section>
   );
 }
 

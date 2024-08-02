@@ -3,11 +3,11 @@
 function FAQ() {
 
   return (
-    <>
+    <section>
       <article>
 
       </article>
-    </>
+    </section>
   );
 }
 

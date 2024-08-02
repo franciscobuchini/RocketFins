@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Home() {
 
   return (
-    <>
+    <section>
       <div id='Title'>
         <img src={logo}/>
         <h1>
@@ -51,7 +51,7 @@ function Home() {
         <p>PDF info</p>
         <p>Support Ukraine</p>
       </article>
-    </>
+    </section>
   );
 }
 
