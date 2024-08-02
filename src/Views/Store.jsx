@@ -114,9 +114,9 @@ function Store() {
             </fieldset>
           </form>
         </div>
-        <div className='Guide'> {guideText} </div>
-        <div className='Footer'>
-          <div className='Subtotal'>
+        <div className='guide'> {guideText} </div>
+        <div className='footer'>
+          <div className='subtotal'>
             <label>Subtotal: </label>
             <span>USD {price}</span>
           </div>

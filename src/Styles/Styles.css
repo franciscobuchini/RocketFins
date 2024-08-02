@@ -27,8 +27,8 @@ html, body { min-height: 100dvh; }
 :root {
   --dark: #1e232c;
   --light: #f5f5f7;
-  --dark-transparent: #1e232c80;
-  --light-transparent: #f5f5f780;
+  --dark-transparent: #1e232c30;
+  --light-transparent: #f5f5f730;
   --primary: #3FBC92;
 
   --button-InputOption-black: #191B1D ;
@@ -41,13 +41,13 @@ html, body { min-height: 100dvh; }
   --button-InputOption-ivory: #B6C994;
   --button-InputOption-pink: #E961A3;
 
-  --size-xxs: 6px;
-  --size-xs: 12px;
-  --size-s: 18px;
-  --size-m: 24px;
-  --size-l: 30px;
-  --size-xl: 60px;
-  --size-xxl: 120px;
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-s: 1rem;
+  --size-m: 1.5rem;
+  --size-l: 2rem;
+  --size-xl: 4rem;
+  --size-xxl: 8rem;
 
   body:has(option[value="light"]:checked){
     --main-background: var(--light);
@@ -345,8 +345,7 @@ button[disabled] {
   justify-content: center;
   flex-wrap: wrap;
   /*frame*/
-  gap: var(--size-m);
-  height: 500px;
+  gap: var(--size-l);
   /*interact*/
   user-select: none;
   /*responsive-mobile*/
@@ -367,19 +366,22 @@ button[disabled] {
   flex-wrap: wrap;
    /*frame*/
    gap: var(--size-xxs) var(--size-xs);
+   padding-left: var(--size-xs);
+   /*colors*/
+   border-left: 2px solid var(--shadow1);
 }
 
 .ButtonsRow > label {
   /*frame*/
   width: 100%;
-  font-size: 14px;
+  font-size: var(--size-s);
   font-weight: 500;
 }
 
 .ButtonsRow > label > span {
   /*frame*/
   width: 100%;
-  font-size: 14px;
+  font-size: var(--size-s);
   font-weight: 300;
 }
 
@@ -411,7 +413,7 @@ button[disabled] {
 .InputOption > input:checked + label {
   /*frame*/
   padding: 0 var(--size-xs);
-  min-width: 36px;
+  min-width: var(--size-l);
   /*colors*/
   background-color: var(--shadow2);
   opacity: 100%;
@@ -419,7 +421,7 @@ button[disabled] {
   color: var(--primary);
 }
 
-.Guide {
+.guide {
   /*frame*/
   width: fit-content;
   /*responsive-mobile*/
@@ -436,7 +438,7 @@ button[disabled] {
   }
 }
 
-.Footer {
+section > article > .footer {
   /*position*/
   display: flex;
   justify-content: space-between;
@@ -446,7 +448,7 @@ button[disabled] {
   border-top: 2px solid var(--shadow1);
 }
 
-.Footer > .Subtotal > span {
+section > article > .footer > .subtotal > span {
   /*frame*/
   font-weight: 700;
 }
