@@ -535,18 +535,18 @@ footer > .footer {
 }
 
 footer > .footer > img {
-
+  /*frame*/
+  width: auto;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    height: var(--size-l);
-    width: min-content;
+    height: var(--size-m);
+
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    height: var(--size-xl);
-    width: min-content;
+    height: var(--size-l);
   }
 }
 
