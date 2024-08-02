@@ -27,8 +27,8 @@ html, body { min-height: 100dvh; }
 :root {
   --dark: #1e232c;
   --light: #f5f5f7;
-  --dark-transparent: #24252750;
-  --light-transparent: #dddddd50;
+  --dark-transparent: #1e232c80;
+  --light-transparent: #f5f5f780;
   --primary: #3FBC92;
 
   --button-InputOption-black: #191B1D ;
