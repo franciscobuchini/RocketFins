@@ -208,6 +208,9 @@ article {
     gap: var(--size-m);
     margin: 10px;
     width: auto;
+    /*colors*/
+    background-color: var(--shadow2);
+    box-shadow: none;
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -217,6 +220,9 @@ article {
     gap: var(--size-l);
     margin: 0 auto;
     width: min(752px, 100%);
+    /*colors*/
+    background-color: var(--main-background);
+    box-shadow: var(--box-shadow1), var(--box-shadow2);
   }
 }
 /*BODY*/
