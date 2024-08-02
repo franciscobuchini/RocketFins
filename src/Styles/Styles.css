@@ -117,6 +117,7 @@ nav > ul > select {
   border-radius: var(--size-m);
   font-weight: 600;
   font-size: var(--size-xs);
+  line-height: calc(var(--size-xs) * 1.6);
 
   /*interact*/
   cursor: pointer;
@@ -229,11 +230,13 @@ article {
   /*responsive-mobile*/
   @media (width <= 768px) {
     font-size: var(--size-l);
+    line-height: calc(var(--size-l) * 1.2);
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
     font-size: var(--size-xl);
+    line-height: calc(var(--size-xl) * 1.2);
     margin: var(--size-xxl) 0;
   }
 }
@@ -389,6 +392,8 @@ button[disabled] {
   /*frame*/
   width: 100%;
   font-size: var(--size-s);
+  line-height: calc(var(--size-s) * 1.6);
+
   font-weight: 500;
 }
 
@@ -396,6 +401,7 @@ button[disabled] {
   /*frame*/
   width: 100%;
   font-size: var(--size-s);
+  line-height: calc(var(--size-s) * 1.6);
   font-weight: 300;
 }
 
