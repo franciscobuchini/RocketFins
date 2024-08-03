@@ -281,6 +281,7 @@ button {
   border-radius: var(--size-m);
   font-weight: 600;
   padding: var(--size-xs);
+  width: fit-content;
   /*interact*/
   cursor: pointer;
   /*colors*/
@@ -300,6 +301,15 @@ button[disabled] {
   /*colors*/
   background-color: var(--main-background);
   color: var(--main-transparent);
+}
+
+a:has(button) {
+  align-self: flex-end;
+}
+
+h3 {
+  border-left: 2px solid var(--primary);
+  padding-left: var(--size-xxs);
 }
 
 /*ORDER VIEW*/
