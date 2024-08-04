@@ -304,13 +304,37 @@ button[disabled] {
 }
 
 a:has(button) {
+  /*position*/
   align-self: flex-end;
 }
 
 h3 {
+  /*frame*/
   border-left: 2px solid var(--primary);
   padding-left: var(--size-xxs);
 }
+
+/*CARDS*/
+#cardsRow {
+  /*position*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*interact*/
+  overflow-y: hidden;
+}
+
+.card {
+  /*frame*/
+  height: 200px;
+  border-radius: var(--size-s);
+  padding: var(--size-s);
+  /*colors*/
+  background-color: var(--shadow2);
+  /*interact*/
+  cursor: pointer;
+}
+/*CARDS*/
 
 /*ORDER VIEW*/
 .ObjectAndButtons {
