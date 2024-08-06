@@ -55,10 +55,10 @@ function Store() {
           <form className='OptionsRow'>
             <fieldset className='ButtonsRow'>
               <label>Shoes size: <span>{selectedSize}</span> </label>
-              <InputOption id='SizeS' name='Size' text='S' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('S'); }}/>
-              <InputOption id='SizeM' name='Size' text='M' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('M'); }}/>
-              <InputOption id='SizeL' name='Size' text='L' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('L'); }}/>
-              <InputOption id='SizeXL' name='Size' text='XL' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('XL'); }}/>
+              <abbr title='21cm shoe lenght / 5-6'> <InputOption id='SizeS' name='Size' text='S' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('S'); }}/> </abbr>
+              <abbr title='23cm shoe lenght / 7-8'><InputOption id='SizeM' name='Size' text='M' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('M'); }}/> </abbr>
+              <abbr title='24.5cm shoe lenght / 8-9'><InputOption id='SizeL' name='Size' text='L' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('L'); }}/> </abbr>
+              <abbr title='27cm shoe lenght / 10-11'><InputOption id='SizeXL' name='Size' text='XL' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('XL'); }}/> </abbr>
             </fieldset>
 
             <fieldset className='ButtonsRow'>
@@ -117,8 +117,11 @@ function Store() {
         <div className='guide'> {guideText} </div>
         <div className='footer'>
           <div className='subtotal'>
-            <label>Subtotal: </label>
-            <span>USD {price}</span>
+            <abbr title='Price without shipping'>
+              <label>Subtotal: </label>
+              <strong>USD {price}</strong>
+            </abbr>
+
           </div>
           <button disabled={!allOptionsSelected}> Continue </button>
         </div>
