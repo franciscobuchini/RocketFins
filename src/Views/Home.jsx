@@ -1,15 +1,16 @@
 // Home.jsx
 import { Link } from 'react-router-dom';
 import Card from "./../Components/Card.jsx"
-import img01 from "./../Assets/fins.webp"
+import img01 from "./../Assets/img01.webp"
 
 function Home() {
 
   return (
     <section>
-      <div id='Title'>
+      <article id='Title'>
+        <img src={img01}/>
         <h1> THE NEXT-GEN FINS FOR UNDERWATER GAMES </h1>
-      </div>
+      </article>
 
       <article id='goToOrder'>
         <h2> Design your own fins </h2>
