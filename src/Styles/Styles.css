@@ -53,7 +53,7 @@ html, body { min-height: 100dvh; }
     --main-text: var(--dark);
     --main-transparent: var(--dark-transparent);
     --transparent25: #ffffff80;
-    --shadow1: #ddddde;
+    --shadow1: #eeeeee;
     --shadow2: #ffffff;
     --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xs) var(--shadow1);
     --box-shadow2: calc(-1 * var(--size-xxs)) calc(-1 * var(--size-xxs)) var(--size-xs) var(--shadow2);
@@ -81,8 +81,6 @@ nav {
   /*frame*/
   width: 100%;
   padding: var(--size-l) var(--size-xl);
-  margin-top: calc(-1 * var(--size-xxl));
-
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*position*/
@@ -125,6 +123,7 @@ nav > ul > select {
   @media (width <= 768px) {
     /*colors*/
     box-shadow: none;
+    background-color: var(--shadow2);
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -164,16 +163,8 @@ nav > img {
 
 /*BODY*/
 body {
-  /*responsive-mobile*/
-  @media (width <= 768px) {
-    /*colors*/
-    background-color: var(--shadow2);
-  }
-  /*responsive-pc*/
-  @media (width > 768px) {
-    /*colors*/
-    background-color: var(--main-background);
-  }
+  /*colors*/
+  background-color: var(--main-background);
 }
 
 main {
@@ -181,8 +172,6 @@ main {
   display: flex;
   flex-direction: column;
   /*frame*/
-  gap: var(--size-xl);
-  margin-top: var(--size-xxl);
   min-height: 100vh;
 }
 
@@ -196,7 +185,7 @@ section {
   display: flex;
   flex-direction: column;
   /*frame*/
-  gap: var(--size-xl);
+  height: 100%;
 }
 
 article {
@@ -207,41 +196,27 @@ article {
   justify-content: center;
   /*colors*/
   background-color: var(--main-background);
+  /*frame*/
+  width: 100%;
+  height: 100%;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    border-radius: var(--size-s);
     padding: var(--size-s);
     gap: var(--size-m);
-    margin: 10px;
-    width: auto;
-    /*colors*/
-    box-shadow: none;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    border-radius: var(--size-l);
     padding: var(--size-l);
     gap: var(--size-l);
-    margin: 0 auto;
-    width: min(752px, 100%);
-    /*colors*/
-    box-shadow: var(--box-shadow1), var(--box-shadow2);
   }
 }
 /*BODY*/
 
 #Title {
-  /*interact*/
-  overflow: hidden;
-  /*frame*/
-
-  width: 100%;
-  border-radius: 0;
   /*colors*/
-  background-color: var(--shadow2);
-  box-shadow: none;
+  background-color: var(--main-background);
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
@@ -257,49 +232,47 @@ article {
 #Title > img {
   /*position*/
   position: absolute;
+  top: 0;
   right: 0;
   /*frame*/
-  min-width: 1250px;
   height: 100%;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
     min-width: 400px;
-    height: 100%;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
-    min-width: 1250px;
-    height: 100%;
+    min-width: 1027px;
   }
 }
 
 #Title > h1 {
   /*position*/
-  text-align: left;
   z-index: 100;
   /*frame*/
   font-weight: 900;
   font-style: italic;
-  padding-right: var(--size-xxl);
   /*colors*/
   color: var(--main-text);
-  text-shadow: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--dark-transparent);
+  text-shadow: 3px 3px 3px var(--dark-transparent);
   /*interact*/
   cursor: default;
   user-select: none;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    font-size: var(--size-l);
-    line-height: var(--size-l);
+    font-size: var(--size-m);
+    line-height: var(--size-m);
+    width: 70%;
   }
   /*responsive-pc*/
   @media (width > 768px) {
     /*frame*/
     font-size: var(--size-xl);
     line-height: var(--size-xl);
+    width: 50%;
   }
 }
 
@@ -335,7 +308,7 @@ a:has(button) {
   align-self: flex-end;
 }
 
-h3 {
+h2, h3 {
   /*frame*/
   border-left: 2px solid var(--primary);
   padding-left: var(--size-xxs);
@@ -343,23 +316,38 @@ h3 {
 
 /*CARDS*/
 #cardsRow {
+  /*frame*/
+  height: auto;
+  /*colors*/
+  background-color: var(--shadow1);
+}
+
+#cardsRow > div {
   /*position*/
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  /*interact*/
-  overflow-y: hidden;
+  flex-wrap: wrap;
+  /*frame*/
+  gap: var(--size-m);
 }
 
 .card {
+  /*position*/
+  display: flex;
   /*frame*/
-  height: 200px;
+  width: auto;
   border-radius: var(--size-s);
   padding: var(--size-s);
+  gap: var(--size-s);
   /*colors*/
-  background-color: var(--shadow2);
+  background-color: var(--main-background);
   /*interact*/
   cursor: pointer;
+}
+
+.card > img {
+  /*frame*/
+  width: 250px;
 }
 /*CARDS*/
 
