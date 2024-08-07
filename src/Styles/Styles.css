@@ -236,20 +236,43 @@ article {
   /*interact*/
   overflow: hidden;
   /*frame*/
-  height: 500px;
+
   width: 100%;
   border-radius: 0;
   /*colors*/
-  background-color: var(--primary);
+  background-color: var(--shadow2);
   box-shadow: none;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    height: 200px;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    height: 500px;
+  }
 }
 
 #Title > img {
   /*position*/
   position: absolute;
-  /*frame*/
-  height: 100%;
   right: 0;
+  /*frame*/
+  min-width: 1250px;
+  height: 100%;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    min-width: 400px;
+    height: 100%;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    min-width: 1250px;
+    height: 100%;
+  }
 }
 
 #Title > h1 {
@@ -259,14 +282,25 @@ article {
   /*frame*/
   font-weight: 900;
   font-style: italic;
-  font-size: var(--size-xl);
-  line-height: var(--size-xl);
+  padding-right: var(--size-xxl);
   /*colors*/
-  color: var(--shadow1);
+  color: var(--main-text);
   text-shadow: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--dark-transparent);
   /*interact*/
   cursor: default;
   user-select: none;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    font-size: var(--size-l);
+    line-height: var(--size-l);
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    font-size: var(--size-xl);
+    line-height: var(--size-xl);
+  }
 }
 
 button {

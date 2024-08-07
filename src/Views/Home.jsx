@@ -9,7 +9,7 @@ function Home() {
     <section>
       <article id='Title'>
         <img src={img01}/>
-        <h1> THE NEXT-GEN FINS FOR UNDERWATER GAMES </h1>
+        <h1>THE NEXT-GEN FINS FOR UNDERWATER SPORTS</h1>
       </article>
 
       <article id='goToOrder'>
