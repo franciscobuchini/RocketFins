@@ -235,9 +235,14 @@ article {
 #Title {
   /*responsive-mobile*/
   @media (width <= 768px) {
-    /*position*/
-    display: none;
-  }    
+    /*frame*/
+    padding: var(--size-xl) 0;
+  } 
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    padding: var(--size-xxl) 0;
+  }   
 }
 
 #Title > h1 {
@@ -248,32 +253,12 @@ article {
   font-style: italic;
   font-size: var(--size-xl);
   line-height: calc(var(--size-xl) * 1.2);
-  margin: var(--size-xxl) 0;
+
   /*colors*/
   color: var(--primary);
   /*interact*/
   cursor: default;
   user-select: none;
-}
-
-#Title > h1 > .word-span {
-  /*responsive-mobile*/
-  @media (width <= 768px) {
-    /*frame*/
-    padding: 0 var(--size-xxs);
-  }
-  /*responsive-pc*/
-  @media (width > 768px) {
-    /*frame*/
-    padding: 0 var(--size-xs);
-  }
-}
-
-#Title > h1 > .word-span > .letter-span:hover {
-  /*colors*/
-  color: var(--primary);
-  /*interact*/
-  transition: 0.1s;
 }
 
 button {

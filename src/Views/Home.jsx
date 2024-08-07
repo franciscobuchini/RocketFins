@@ -8,29 +8,7 @@ function Home() {
   return (
     <section>
       <div id='Title'>
-        <h1>
-          <span className='word-span'>
-            <span className='letter-span'>T</span>
-            <span className='letter-span'>h</span>
-            <span className='letter-span'>e</span>
-          </span>
-          <span className='word-span'>
-            <span className='letter-span'>N</span>
-            <span className='letter-span'>e</span>
-            <span className='letter-span'>x</span>
-            <span className='letter-span'>t</span>
-            <span className='letter-span'>-</span>
-            <span className='letter-span'>G</span>
-            <span className='letter-span'>e</span>
-            <span className='letter-span'>n</span>
-          </span>
-          <span className='word-span'>
-            <span className='letter-span'>F</span>
-            <span className='letter-span'>i</span>
-            <span className='letter-span'>n</span>
-            <span className='letter-span'>s</span>
-          </span>
-        </h1>
+        <h1> THE NEXT-GEN FINS FOR UNDERWATER GAMES </h1>
       </div>
 
       <article id='goToOrder'>
