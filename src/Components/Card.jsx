@@ -13,7 +13,7 @@ function Card({img, blade_area, shoe_size, blade_stiffness, blade_color, shoe_co
         <label>Shoe color: <span>{shoe_color}</span> </label> <br/>
         <label>Bumper color: <span>{bumper_color}</span> </label> <br/>
         <label>Guide color: <span>{guide_color}</span> </label> <br/>
-        <br/> <label>Price: <span>{fins_price}</span> </label>
+        <br/> <label><span>{fins_price}</span> </label>
       </div>
     </div>
   );

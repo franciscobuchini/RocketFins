@@ -30,7 +30,7 @@ html, body { min-height: 100dvh; }
   --text-light: #CCCCCC;
   --text-light-neutral: #999999;
   --light: #f5f5f7;
-  --dark-transparent: #1e232c30;
+  --dark-transparent: #161a2360;
   --light-transparent: #f5f5f730;
   --primary: #3FBC92;
 
@@ -60,8 +60,6 @@ html, body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #eeeeee;
     --shadow2: #ffffff;
-    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xs) var(--shadow1);
-    --box-shadow2: calc(-1 * var(--size-xxs)) calc(-1 * var(--size-xxs)) var(--size-xs) var(--shadow2);
   }
 
   body:has(option[value="dark"]:checked){
@@ -72,8 +70,6 @@ html, body { min-height: 100dvh; }
     --transparent25: #F5F5F710;
     --shadow1: #1b2028;
     --shadow2: #212730;
-    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xs) var(--shadow1);
-    --box-shadow2: calc(-1 * var(--size-xxs)) calc(-1 * var(--size-xxs)) var(--size-xs) var(--shadow2);
   }
 }
 /*VARIABLES*/
@@ -231,13 +227,40 @@ article > img {
   }
 }
 
-/*BODY*/
-
-#home_title, #home_design {
+article > .wave1,
+article > .wave2 {
+  /*position*/
+  position: absolute;
+  z-index: 0;
+  /*frame*/
+  min-width: 100% !important;
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
-    height: 200px;
+    height: var(--size-l);
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    height: var(--size-xl);
+  }
+}
+
+article > .wave1 {
+  bottom: 0;
+}
+
+article > .wave2 {
+  top: 0;
+}
+
+/*BODY*/
+
+#home_title, #home_design, #home_cardsrow {
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    height: 250px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
@@ -312,17 +335,14 @@ article > img {
   /*frame*/
   height: min-content;
   /*colors*/
-  background-color: var(--main-background);
-}
-
-#home_cardsrow > img {
-  min-width: 100%;
+  background-color: var(--primary-dark);
 }
 
 #home_cardsrow > div {
   /*position*/
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   /*frame*/
   gap: var(--size-xs);
 
@@ -331,28 +351,37 @@ article > img {
 .card {
   /*position*/
   display: flex;
+  z-index: 100;
   /*frame*/
   border-radius: var(--size-s);
-
-  max-width: 33%; 
+  width: 450px;
+  padding: 0 var(--size-s);
   /*colors*/
-  background-color: var(--shadow1);
+  background-color: var(--dark-transparent);
+  backdrop-filter: blur(var(--size-xs));
   /*interact*/
   cursor: pointer;
 }
 
+.card > img {
+  height: 200px;
+  width: auto;
+  align-self: flex-end;
+}
+
 .card > .cardInfo {
+  /*frame*/
   padding: var(--size-s);
 }
 
 .card > .cardInfo > label {
-  color: var(--main-neutral);
+  color: var(--light);
 }
 
 .card > .cardInfo > label > span {
-  color: var(--main-text);
-
+  /*frame*/
   font-weight: 600;
+  color: var(--light);
 }
 /*CARDS*/
 

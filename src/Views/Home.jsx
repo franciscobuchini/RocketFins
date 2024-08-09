@@ -5,30 +5,34 @@ import fins01 from "./../Assets/fins01.webp"
 import fins02 from "./../Assets/fins02.webp"
 import fins03 from "./../Assets/fins03.webp"
 import fins04 from "./../Assets/fins04.webp"
+import fins05 from "./../Assets/fins05.webp"
+import fins06 from "./../Assets/fins06.webp"
 import img01 from "./../Assets/img01.webp"
-import img02 from "./../Assets/img02.webp"
 import wave from "./../Assets/wave.webp"
 import wave2 from "./../Assets/wave2.webp"
+import white_wave2 from "./../Assets/white_wave2.webp"
 function Home() {
 
   return (
     <section>
       <article id='home_title'>
         <img src={img01}/>
+        <img className='wave2' src={white_wave2}/>
         <h1>THE NEXT GEN FINS FOR UNDERWATER SPORTS</h1>
+        <img className='wave1' src={wave}/>
       </article>
       <article className='home_separation'>
-        {/* <img src={wave}/>
-        <img src={wave2}/> */}
         <h2> The best selection: </h2>
       </article>
       <article id="home_cardsrow">
-        <img src={img02}/>
+      <img className='wave2' src={wave2}/>
         <div>
           <Card img={fins01}/>
           <Card img={fins02}/>
           <Card img={fins03}/>
           <Card img={fins04}/>
+          <Card img={fins05}/>
+          <Card img={fins06}/>
         </div>
       </article>
 
