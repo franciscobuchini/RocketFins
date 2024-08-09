@@ -49,22 +49,23 @@ function Store() {
 
   return (
     <section>
-      <article>
+      <article id='Finshome_designer'>
         <div className='ObjectAndButtons'>
           <Object3D texture={texture} />
           <form className='OptionsRow'>
+
+            <fieldset className='ButtonsRow'>
+              <label>Blade area: <span>{selectedArea}</span> </label>
+              <InputOption id='AreaUWH' name='Area' text='UWH' onClick={() => { guideTextChange(`${textGuide_bladeArea}`); setAreaSelected(true); setSelectedArea('UWH'); }}/>
+              <InputOption id='AreaUWR' name='Area' text='UWR' onClick={() => { guideTextChange(`${textGuide_bladeArea}`); setAreaSelected(true); setSelectedArea('UWR'); }}/>
+            </fieldset>
+
             <fieldset className='ButtonsRow'>
               <label>Shoes size: <span>{selectedSize}</span> </label>
               <abbr title='21cm shoe lenght / 5-6'> <InputOption id='SizeS' name='Size' text='S' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('S'); }}/> </abbr>
               <abbr title='23cm shoe lenght / 7-8'><InputOption id='SizeM' name='Size' text='M' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('M'); }}/> </abbr>
               <abbr title='24.5cm shoe lenght / 8-9'><InputOption id='SizeL' name='Size' text='L' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('L'); }}/> </abbr>
               <abbr title='27cm shoe lenght / 10-11'><InputOption id='SizeXL' name='Size' text='XL' onClick={() => { guideTextChange(`${textGuide_size}`); setSizeSelected(true); setSelectedSize('XL'); }}/> </abbr>
-            </fieldset>
-
-            <fieldset className='ButtonsRow'>
-              <label>Blade area: <span>{selectedArea}</span> </label>
-              <InputOption id='AreaUWH' name='Area' text='UWH' onClick={() => { guideTextChange(`${textGuide_bladeArea}`); setAreaSelected(true); setSelectedArea('UWH'); }}/>
-              <InputOption id='AreaUWR' name='Area' text='UWR' onClick={() => { guideTextChange(`${textGuide_bladeArea}`); setAreaSelected(true); setSelectedArea('UWR'); }}/>
             </fieldset>
 
             <fieldset className='ButtonsRow'>
