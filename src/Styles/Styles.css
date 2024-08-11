@@ -193,12 +193,15 @@ main {
   height: var(--size-xl);
 }
 
+.content {
+
+}
+
 section {
   /*position*/
   display: flex;
   flex-direction: column;
-  /*frame*/
-  height: 100%;
+
 }
 
 article {
@@ -643,11 +646,16 @@ h2, h3 {
   /*frame*/
   border-left: 2px solid var(--primary);
   padding-left: var(--size-xxs);
+  /*colors*/
   color: var(--main-text);
 }
 
 p {
+  /*position*/
+  z-index: 1000;
+  /*colors*/
   color: var(--main-neutral);
+
 }
 
 h2 {

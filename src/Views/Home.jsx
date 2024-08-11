@@ -33,9 +33,9 @@ function Home() {
 
       <article id='home_design'>
         <h2> Design your own fins </h2>
-        <p> 50.000 availables combinations! </p>
+        <p> Use your creativity, <br/> 50.000 availables <br/>combinations! </p>
         <Link className='buttonLink' to="/store">
-          <button>Let's do it</button>
+          <button>Try it 🖌️</button>
         </Link>
         <img src={img02}/>
       </article>
@@ -46,7 +46,7 @@ function Home() {
         <p>Your support helps provide food, shelter, and medical assistance to families affected by the ongoing conflict. Together, we can make a significant impact and bring hope to those in need.</p>
         <p>Purchase today and let your swim make waves of change.</p>
         <Link className="buttonLink" to="/store">
-          <button>Purchase Now and Support Ukraine</button>
+          <button>Purchase & Support Ukraine 💛💙</button>
         </Link>
       </article>
 {/*       
