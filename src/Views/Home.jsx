@@ -39,8 +39,8 @@ function Home() {
         </Link>
         <img src={img02}/>
       </article>
-{/* 
-      <article>
+
+      <article id='home_ukraine'>
         <h2>Shop with Purpose: Support Ukraine</h2>
         <p>At Rocketfin, we believe in the power of sports to unite and uplift communities. That's why, with every pair of fins you purchase, a portion of the sale goes directly to humanitarian aid in Ukraine.</p>
         <p>Your support helps provide food, shelter, and medical assistance to families affected by the ongoing conflict. Together, we can make a significant impact and bring hope to those in need.</p>
@@ -49,16 +49,15 @@ function Home() {
           <button>Purchase Now and Support Ukraine</button>
         </Link>
       </article>
-      
+{/*       
       <article>
-        <p>* Shipping Information</p>
+        <p>* Shipping and Buy Information</p>
         <p>Language Switcher</p>
         <p>Contact Information</p>
         <p>Blog section: New releases, next dates.</p>
         <p>Instagram API</p>
         <p>Other products</p>
         <p>PDF info</p>
-        <p>Best models list // call to action</p>
       </article> */}
     </section>
   );

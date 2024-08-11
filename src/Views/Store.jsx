@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Object3D from "../Components/Object3D";
 import InputOption from "../Components/InputOption";
+import { Link } from 'react-router-dom';
 
 function Store() {
   const [texture, setTexture] = useState('option5');
@@ -124,7 +125,9 @@ function Store() {
             </abbr>
 
           </div>
-          <button disabled={!allOptionsSelected}> Continue </button>
+          <button disabled={!allOptionsSelected}>
+            <Link to="/Information">Continue</Link>
+          </button>
         </div>
       </article>
     </section>

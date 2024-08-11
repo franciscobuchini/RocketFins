@@ -45,6 +45,7 @@ html, body { min-height: 100dvh; }
   --button-InputOption-pink: #E961A3;
 
   --size-xxs: 0.5rem;
+  --size-nxxs: -0.5rem;
   --size-xs: 0.75rem;
   --size-s: 1rem;
   --size-m: 1.5rem;
@@ -60,7 +61,8 @@ html, body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #eeeeee;
     --shadow2: #ffffff;
-    --box-shadow1: var(--size-xs) var(--size-xs) var(--size-m) var(--dark-transparent);
+    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--shadow1);
+    --box-shadow2: var(--size-nxxs) var(--size-nxxs) var(--size-xxs) var(--shadow2);
   }
 
   body:has(option[value="dark"]:checked){
@@ -71,7 +73,8 @@ html, body { min-height: 100dvh; }
     --transparent25: #F5F5F710;
     --shadow1: #1b2028;
     --shadow2: #212730;
-    --box-shadow1: var(--size-xs) var(--size-xs) var(--size-m) var(--shadow1);
+    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--shadow1);
+    --box-shadow2: var(--size-nxxs) var(--size-nxxs) var(--size-xxs) var(--shadow2);
   }
 }
 /*VARIABLES*/
@@ -225,6 +228,7 @@ article {
 }
 
 article > h2,
+article > h3,
 article > a {
   /*position*/
   z-index: 1000;
@@ -241,7 +245,7 @@ article > img {
 }
 /*BODY*/
 
-#home_title, #home_design, #home_cardsrow {
+#home_title, #home_design, #home_cardsrow, #home_ukraine {
   /*responsive-mobile*/
   @media (width <= 768px) {
     /*frame*/
@@ -262,7 +266,7 @@ article > img {
   font-weight: 900;
   font-style: italic;
   /*colors*/
-  color: var(--main-neutral);
+  color: var(--main-text);
   text-shadow: 2px 0 var(--main-background), -2px 0 var(--main-background), 0 2px var(--main-background), 0 -2px var(--main-background),
   1px 1px var(--main-background), -1px -1px var(--main-background), 1px -1px var(--main-background), -1px 1px var(--main-background);
   /*interact*/
@@ -302,10 +306,9 @@ article > img {
 }
 
 /*CARDS*/
-#home_cardsrow {
+#home_cardsrow, #home_ukraine {
   /*frame*/
   height: min-content;
-  /*colors*/
 }
 
 #home_cardsrow > div {
@@ -640,6 +643,11 @@ h2, h3 {
   /*frame*/
   border-left: 2px solid var(--primary);
   padding-left: var(--size-xxs);
+  color: var(--main-text);
+}
+
+p {
+  color: var(--main-neutral);
 }
 
 h2 {
