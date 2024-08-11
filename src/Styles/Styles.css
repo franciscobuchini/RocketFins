@@ -318,7 +318,7 @@ article > img {
   /*position*/
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   /*frame*/
   gap: var(--size-xs);
 
@@ -338,6 +338,17 @@ article > img {
   backdrop-filter: blur(var(--size-xs));
   /*interact*/
   cursor: pointer;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    width: 200px;
+    flex-grow: 1;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+
+  }
 }
 
 .card:hover {
@@ -347,7 +358,7 @@ article > img {
 .card > img {
   height: auto;
   width: 200px;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .card > .cardInfo {
@@ -600,13 +611,13 @@ button {
   /*interact*/
   cursor: pointer;
   /*colors*/
-  color: var(--main-background);
+  background-color: var(--primary);
+  color: var(--text-dark);
 }
 
 button:hover {
   /*colors*/
   outline: 2px solid var(--main-text);
-  background-color: var(--main-transparent);
 }
 
 button[disabled] {
