@@ -110,8 +110,17 @@ nav > ul {
   /*position*/
   display: flex;
   justify-content: center;
-  /*frame*/
-  gap: var(--size-xs);
+
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*frame*/
+    gap: var(--size-xxs);
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*frame*/
+    gap: var(--size-xs);
+  }
 }
 
 nav > ul > li,
@@ -139,7 +148,7 @@ nav > ul > select:hover {
 
 nav > ul > li > a {
   /*frame*/
-  padding: var(--size-xxs) var(--size-xs);
+  padding: var(--size-xxs);
 }
 
 nav > ul > select {
@@ -245,21 +254,6 @@ article > img {
   }
 }
 
-#home_title {
-  /*colors*/
-  background-color: var(--main-background);
-  /*responsive-mobile*/
-  @media (width <= 768px) {
-    /*frame*/
-    height: 200px;
-  }
-  /*responsive-pc*/
-  @media (width > 768px) {
-    /*frame*/
-    height: 500px;
-  }
-}
-
 #home_title > h1 {
   /*position*/
   z-index: 100;
@@ -327,7 +321,6 @@ article > img {
 .card {
   /*position*/
   display: flex;
-  flex-direction: column;
   z-index: 100;
   /*frame*/
   border-radius: var(--size-s);
@@ -335,19 +328,22 @@ article > img {
   padding: 0 var(--size-xxs);
   /*colors*/
   background-color: var(--shadow2);
-  backdrop-filter: blur(var(--size-xs));
   /*interact*/
   cursor: pointer;
+  overflow: hidden;
   /*responsive-mobile*/
   @media (width <= 768px) {
+    /*position*/
+    flex-direction: row;
     /*frame*/
-    width: 200px;
     flex-grow: 1;
+    min-width: 250px;
+    max-height: 230px;
   }
   /*responsive-pc*/
   @media (width > 768px) {
-    /*frame*/
-
+    /*position*/
+    flex-direction: column;
   }
 }
 
@@ -356,14 +352,26 @@ article > img {
 }
 
 .card > img {
+  /*frame*/
   height: auto;
   width: 200px;
-  align-self: center;
+  /*responsive-mobile*/
+  @media (width <= 768px) {
+    /*position*/
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+  /*responsive-pc*/
+  @media (width > 768px) {
+    /*position*/
+    align-self: center;
+  }
 }
 
 .card > .cardInfo {
   /*frame*/
   padding: var(--size-s) var(--size-xxs);
+  min-width: 160px;
 }
 
 .card > .cardInfo > label {

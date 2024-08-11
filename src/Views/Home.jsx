@@ -26,7 +26,7 @@ function Home() {
           <Card img={fins02} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Blue" shoe_color="White" bumper_color="White" guide_color="White" fins_price="USD 320"/>
           <Card img={fins03} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Pink" shoe_color="White" bumper_color="White" guide_color="White" fins_price="USD 320"/>
           <Card img={fins04} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Black" shoe_color="Blue" bumper_color="Blue" guide_color="Blue" fins_price="USD 320"/>
-          <Card img={fins05} blade_area="UWH" shoe_size="S" blade_stiffness="Soft" blade_color="Black" shoe_color="Black" bumper_color="Black" guide_color="Black" fins_price="USD 370"/>
+          <Card img={fins05} blade_area="UWH" shoe_size="S" blade_stiffness="Extra Hard" blade_color="Black" shoe_color="Black" bumper_color="Black" guide_color="Black" fins_price="USD 370"/>
           <Card img={fins06} blade_area="UWH" shoe_size="S" blade_stiffness="Soft" blade_color="Pink" shoe_color="Black" bumper_color="Black" guide_color="Black" fins_price="USD 370"/>
         </div>
       </article>
