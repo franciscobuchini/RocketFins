@@ -625,6 +625,10 @@ button {
   color: var(--text-dark);
 }
 
+button > a {
+  color: var(--text-dark);
+}
+
 button:hover {
   /*colors*/
   outline: 2px solid var(--main-text);
@@ -632,10 +636,14 @@ button:hover {
 
 button[disabled] {
   /*interact*/  
-  cursor: not-allowed;
+  pointer-events: none;
   /*colors*/
-  background-color: var(--main-background);
+  background-color: var(--main-transparent);
   color: var(--main-transparent);
+}
+
+button[disabled]:hover {
+  outline: none;
 }
 
 h2, h3 {
