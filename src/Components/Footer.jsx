@@ -12,7 +12,7 @@ function Footer() {
         <div className="wave wave4"></div>
       </div>
       <div className='footer'>
-        <img src={logo}/>
+        {/* <img src={logo}/> */}
       </div>
     </footer>
   );

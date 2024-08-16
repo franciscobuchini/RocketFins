@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 
 import './Styles/Styles.css'
+import './Fonts/Satoshi.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

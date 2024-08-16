@@ -4,6 +4,7 @@ function Card({img, blade_area, shoe_size, blade_stiffness, blade_color, shoe_co
 
   return (
     <div className="card">
+      <img src={img}/>
       <div className="cardInfo">
         <label>Area: <span>{blade_area}</span> </label> <br/>
         <label>Size: <span>{shoe_size}</span> </label> <br/>
@@ -14,7 +15,6 @@ function Card({img, blade_area, shoe_size, blade_stiffness, blade_color, shoe_co
         <label>Guides: <span>{guide_color}</span> </label> <br/>
         <br/> <label><span>{fins_price}</span> </label>
       </div>
-      <img src={img}/>
     </div>
   );
 }

@@ -15,6 +15,35 @@ function Home() {
     <section>
       <article id='home_title'>
         <img src={img01}/>
+        <h1>The NextGen fins for <br/> undewater sports</h1>
+        <p>Create your fins to match your style. <br/> With 50,000 unique combinations, <br/> you'll stand out from the crowd.</p>
+        <button>
+          <Link to="/Store">Create your fins now</Link>
+        </button>
+      </article>
+      <article id="home_featured">
+        <h2>❤️‍🔥 Featured </h2>
+        <p>Discover our best selection:</p>
+        <div>
+          <Card img={fins01} blade_area="UWH" shoe_size="M" blade_stiffness="Soft" blade_color="Ivory" shoe_color="White" bumper_color="White" guide_color="White" fins_price="USD 380"/>
+          <Card img={fins02} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Blue" shoe_color="White" bumper_color="White" guide_color="White" fins_price="USD 320"/>
+          <Card img={fins03} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Pink" shoe_color="White" bumper_color="White" guide_color="White" fins_price="USD 320"/>
+          <Card img={fins04} blade_area="UWH" shoe_size="L" blade_stiffness="Soft" blade_color="Black" shoe_color="Blue" bumper_color="Blue" guide_color="Blue" fins_price="USD 320"/>
+          <Card img={fins05} blade_area="UWH" shoe_size="S" blade_stiffness="Extra Hard" blade_color="Black" shoe_color="Black" bumper_color="Black" guide_color="Black" fins_price="USD 370"/>
+          <Card img={fins06} blade_area="UWH" shoe_size="S" blade_stiffness="Soft" blade_color="Pink" shoe_color="Black" bumper_color="Black" guide_color="Black" fins_price="USD 370"/>
+        </div>
+      </article>
+    </section>
+  );
+}
+
+export default Home;
+
+
+
+
+      {/* <article id='home_title'>
+        <img src={img01}/>
         <h1>THE NEXT GEN FINS FOR UNDERWATER SPORTS</h1>
       </article>
       <article className='home_separation'>
@@ -49,7 +78,7 @@ function Home() {
           <button>Purchase & Support Ukraine 💛💙</button>
         </Link>
       </article>
-{/*       
+
       <article>
         <p>* Shipping and Buy Information</p>
         <p>Language Switcher</p>
@@ -59,8 +88,3 @@ function Home() {
         <p>Other products</p>
         <p>PDF info</p>
       </article> */}
-    </section>
-  );
-}
-
-export default Home;
