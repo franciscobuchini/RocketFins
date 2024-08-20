@@ -65,8 +65,8 @@ html, body { min-height: 100dvh; }
     --transparent25: #ffffff80;
     --shadow1: #eeeeee;
     --shadow2: #ffffff;
-    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--shadow1);
-    --box-shadow2: var(--size-nxxs) var(--size-nxxs) var(--size-xxs) var(--shadow2);
+    --box-shadow1: var(--size-xxs) var(--size-xxs) var(--size-xxs) var(--main-lighter);
+    --box-shadow2: var(--size-nxxs) var(--size-nxxs) var(--size-xxs) var(--main-darker);
   }
 
   body:has(option[value="dark"]:checked){
@@ -660,7 +660,6 @@ p {
   z-index: 1000;
   /*colors*/
   color: var(--main-neutral);
-
 }
 
 h2 {
@@ -675,7 +674,6 @@ h2 {
     font-size: var(--size-m);
   }
 }
-
 /*PROPS*/
 
 /*FOOTER*/
