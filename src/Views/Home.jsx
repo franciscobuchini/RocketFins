@@ -37,7 +37,7 @@ function Home() {
         <h2> Design your own fins 🖌️</h2>
         <p> Try your creativity. 50,000 availables combinations! </p>
         <Link className='buttonLink' to="/store">
-          <button>Create your fins</button>
+          <button>Try it!</button>
         </Link>
         <img src={img02}/>
       </article>

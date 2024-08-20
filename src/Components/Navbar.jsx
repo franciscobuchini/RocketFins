@@ -1,7 +1,7 @@
 //Navbar.jsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from './../Assets/logo_black.webp'
+import Logo from './../Assets/logo.webp'
 
 function Navbar() {
   const location = useLocation();

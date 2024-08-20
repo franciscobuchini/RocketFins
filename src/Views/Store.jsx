@@ -50,9 +50,9 @@ function Store() {
 
   return (
     <section>
-      <article id='Finshome_designer'>
+      <article id='fins_designer'>
         <div className='ObjectAndButtons'>
-          <Object3D texture={texture} />
+          <Object3D />
           <form className='OptionsRow'>
 
             <fieldset className='ButtonsRow'>

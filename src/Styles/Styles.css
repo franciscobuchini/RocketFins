@@ -301,11 +301,11 @@ button {
   cursor: pointer;
   /*colors*/
   background-color: var(--primary);
-  color: var(--text-dark);
+  color: var(--dark-lighter);
 }
 
 button > a {
-  color: var(--main-background);
+  color: var(--dark-lighter);
 }
 
 button:hover {
