@@ -35,7 +35,6 @@ function Information() {
         </div>
 
         <div class="input_box">
-
           <label htmlFor="Email"> E-mail* </label>
           <input id="Email" type="text"></input>
 
@@ -44,6 +43,14 @@ function Information() {
 
           <label htmlFor="Phone"> Phone* </label>
           <input id="Phone" type="text"></input>
+        </div>
+
+        <div class="input_box">
+          <label htmlFor="Sport"> Sport* </label>
+          <input id="Sport" type="text"></input>
+
+          <label htmlFor="TeamClub"> Team/Club </label>
+          <input id="TeamClub" type="text"></input>
         </div>
 
       </article>
