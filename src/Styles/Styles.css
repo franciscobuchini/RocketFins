@@ -659,3 +659,27 @@ section > article > .footer > .subtotal {
   background-color: var(--button-InputOption-pink);
 }
 /*ORDER VIEW*/
+
+/*INFORMATION VIEW*/
+#information_inputs > .input_box {
+  /*position*/
+  display: flex;
+  flex-direction: column;
+  /*frame*/
+  gap: var(--size-xxs);
+}
+
+#information_inputs > .input_box > label {
+  /*frame*/
+  padding-left: var(--size-xs);
+}
+
+#information_inputs > .input_box > input {
+  /*frame*/
+  height: 2rem;
+  border-radius: var(--size-xxs);
+  padding: var(--size-xxs);
+  /*colors*/
+  border: 2px solid var(--main-darker);
+}
+/*INFORMATION VIEW*/
