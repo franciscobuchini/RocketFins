@@ -277,13 +277,26 @@ h1, h2 {
   font-size: 3rem;
 }
 
+h3 {
+  /*frame*/
+  padding-left: var(--size-xxs);
+  /*colors*/
+  border-left: var(--size-xxs) solid var(--primary);
+}
+
 p {
   /*position*/
   z-index: 1000;
   /*frame*/
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 2rem;
   font-weight: 400;
+  /*colors*/
+  color: var(--main-neutral);
+}
+
+article > p {
+  font-size: 1.25rem;
 }
 /*ARTICLES*/
 
