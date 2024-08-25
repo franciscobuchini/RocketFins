@@ -1,57 +1,64 @@
 // Information.jsx
+import { Link } from 'react-router-dom';
+
 function Information() {
 
   return (
     <section>
       <article id="information_inputs">
+        <h1> Shipping information: </h1>
         <div class="input_box">
-          <label htmlFor="FirstName"> First name* </label>
+          <label htmlFor="FirstName"> first name* </label>
           <input id="FirstName" type="text"></input>
 
-          <label htmlFor="LastName"> Last name* </label>
+          <label htmlFor="LastName"> last name* </label>
           <input id="LastName" type="text"></input>
         </div>
 
         <div class="input_box">
-          <label htmlFor="Country"> Country* </label>
+          <label htmlFor="Country"> country* </label>
           <input id="Country" type="text"></input>
 
-          <label htmlFor="City"> City* </label>
+          <label htmlFor="City"> city* </label>
           <input id="City" type="text"></input>
 
-          <label htmlFor="ZipCode"> Zip code* </label>
-          <input id="ZipCode" type="text"></input>
+          <label htmlFor="ZipCode"> zip code* </label>
+          <input id="ZipCode" type="number"></input>
         </div>
 
         <div class="input_box">
-          <label htmlFor="Street"> Street* </label>
+          <label htmlFor="Street"> street* </label>
           <input id="Street" type="text"></input>
 
-          <label htmlFor="HouseNumber"> House number* </label>
+          <label htmlFor="HouseNumber"> house number* </label>
           <input id="HouseNumber" type="text"></input>
 
-          <label htmlFor="FloorApartment"> Floor, apartment</label>
+          <label htmlFor="FloorApartment"> floor, apartment</label>
           <input id="FloorApartment" type="text"></input>
         </div>
 
         <div class="input_box">
-          <label htmlFor="Email"> E-mail* </label>
+          <label htmlFor="Email"> e-mail* </label>
           <input id="Email" type="mail"></input>
 
-          <label htmlFor="Code"> Code* </label>
+          <label htmlFor="Code"> area code* </label>
           <input id="Code" type="number"></input>
 
-          <label htmlFor="Phone"> Phone* </label>
+          <label htmlFor="Phone"> phone* </label>
           <input id="Phone" type="number"></input>
         </div>
 
         <div class="input_box">
-          <label htmlFor="Sport"> Sport* </label>
+          <label htmlFor="Sport"> sport* </label>
           <input id="Sport" type="text"></input>
 
-          <label htmlFor="TeamClub"> Team/Club </label>
+          <label htmlFor="TeamClub"> team/club </label>
           <input id="TeamClub" type="text"></input>
         </div>
+
+        <button>
+            <Link>Continue</Link>
+        </button>
 
       </article>
     </section>

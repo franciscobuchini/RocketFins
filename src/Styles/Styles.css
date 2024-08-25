@@ -307,7 +307,7 @@ button {
   /*frame*/
   border-radius: var(--size-xs);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: var(--size-xs);
   width: fit-content;
   /*interact*/
@@ -331,6 +331,9 @@ button[disabled] {
   pointer-events: none;
   /*colors*/
   background-color: var(--main-darker);
+  > a {
+    color: var(--main-neutral);
+  }
 }
 
 button[disabled]:hover {
