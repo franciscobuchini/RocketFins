@@ -36,13 +36,13 @@ function Information() {
 
         <div class="input_box">
           <label htmlFor="Email"> E-mail* </label>
-          <input id="Email" type="text"></input>
+          <input id="Email" type="mail"></input>
 
           <label htmlFor="Code"> Code* </label>
-          <input id="Code" type="text"></input>
+          <input id="Code" type="number"></input>
 
           <label htmlFor="Phone"> Phone* </label>
-          <input id="Phone" type="text"></input>
+          <input id="Phone" type="number"></input>
         </div>
 
         <div class="input_box">

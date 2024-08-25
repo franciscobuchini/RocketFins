@@ -677,7 +677,7 @@ section > article > .footer > .subtotal {
 #information_inputs > .input_box {
   /*position*/
   display: flex;
-  flex-direction: column;
+  align-items: center;
   /*frame*/
   gap: var(--size-xxs);
 }
@@ -685,6 +685,7 @@ section > article > .footer > .subtotal {
 #information_inputs > .input_box > label {
   /*frame*/
   padding-left: var(--size-xs);
+  border-left: 2px solid var(--primary);
 }
 
 #information_inputs > .input_box > input {
