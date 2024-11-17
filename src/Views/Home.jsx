@@ -18,7 +18,7 @@ function Home() {
         <h1>The NextGen fins for <br/> undewater sports</h1>
         <p>Create your fins to match your style. <br/> With 50,000 unique combinations, <br/> you'll stand out from the crowd.</p>
         <button>
-          <Link to="/Store">Create your fins now</Link>
+          <Link to="/Store">Create your fins</Link>
         </button>
       </article>
       <article id="home_featured">
