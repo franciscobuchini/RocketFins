@@ -247,8 +247,11 @@ article > img {
 #home_featured > div {
   /*position*/
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   /*frame*/
   gap: var(--size-l);
+  width: 100%;
 }
 
 #home_featured > div > .card {
